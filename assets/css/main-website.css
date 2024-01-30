@@ -17,6 +17,13 @@ body {
   max-width: 1280px;
 }
 
+.close{
+  font-size:50px;
+  position:absolute;
+  right:10vh;
+  color:var(--primary);
+}
+
 
 .glassmorphic-card ul {
   display: inline-flex;
@@ -112,5 +119,9 @@ ul:hover {
 
   .line-title {
       width: 250px;
+  }
+  .close{
+    font-size: 50px;
+    right: 2vh;
   }
 }

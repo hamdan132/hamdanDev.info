@@ -40,7 +40,12 @@ ul,
 ol {
   list-style: none;
 }
-
+.close{
+  font-size:50px;
+  position:absolute;
+  right:10vh;
+  color:var(--primary);
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -316,6 +321,9 @@ button {
     -webkit-transform: translateY(calc(100% - 42px)) !important;
   }
 }
+.owl-nav.disabled,.owl-dots{
+  display: none !important;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px)  {
   h2 {
@@ -327,6 +335,7 @@ button {
     font-size: 34px;
     line-height: 32px;
   }
+
 
   .line-title {
     width: 330px;
@@ -352,5 +361,9 @@ button {
   .App-portfolio .item-desc {
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
+  }
+  .close{
+    font-size: 50px;
+    right: 2vh;
   }
 }
