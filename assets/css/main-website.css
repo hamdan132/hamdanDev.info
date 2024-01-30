@@ -1,0 +1,116 @@
+:root {
+  --primary: #fd5555;
+  --primary-hover: #ff1b1b;
+  --secondary: #050c16;
+}
+
+body {
+  background-color: black;
+}
+
+.glassmorphic-card {
+  justify-content: center;
+  position: relative;
+  display: flex;
+}
+.contentBox{
+  max-width: 1280px;
+}
+
+
+.glassmorphic-card ul {
+  display: inline-flex;
+  width: max-content;
+  list-style-type: none;
+  padding: 8px 20px;
+  margin: 15px 9px 0 0;
+  background: #ffffffcf;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--primary);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+li a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  text-align: center;
+}
+
+ul:hover {
+  scale: 1.1;
+  transition: scale 0.4s ease;
+}
+
+/* -------- title style ------- */
+.line-title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.line-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  font-size: 32px;
+  padding-bottom: 20px;
+  color: var(--primary);
+}
+
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.line-title::after {
+  width: 32px;
+  background: var(--primary);
+}
+
+.item-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.item-btn button {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: cursive;
+  background: none;
+  border: none;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .line-title {
+      width: 330px;
+      font-size: 45px;
+      padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 767px) {
+
+  .line-title {
+      width: 250px;
+  }
+}
