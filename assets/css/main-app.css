@@ -236,8 +236,14 @@ button {
 
   h3 {
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 34px;
     line-height: 32px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .item-btn button{
+    font-size: 28px;
   }
 
   /* -------- Landing page ------- */
@@ -261,14 +267,64 @@ button {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+
+@media only screen and (max-width: 600px){
+  body {
+    font-size: 14px !important;
+  }
+
+  .App-portfolio .item {
+    margin: 0 12px;
+    width: 420px !important;
+    height: 930px !important;
+  }
+
+  h2 {
+    margin-bottom: 20px !important;
+  }
+
+  h3 {
+    margin: 0 0 8px !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
+  }
+
+  .line-title {
+    width: 250px !important;
+  }
+
+  /* -------- Landing page ------- */
+  .App-portfolio {
+    padding: 30px 15px 20px !important;
+  }
+
+  .App-portfolio .item {
+    margin: 0 10px !important;
+    width: 400px !important;
+    height: 880px !important;
+  }
+
+  .App-portfolio .item.active {
+    width: 270px !important;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25) !important;
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .App-portfolio .item-desc {
+    padding: 0 14px 5px !important;
+    transform: translateY(calc(100% - 42px)) !important;
+    -webkit-transform: translateY(calc(100% - 42px)) !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
   h2 {
     margin-bottom: 32px;
   }
 
   h3 {
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 34px;
     line-height: 32px;
   }
 
@@ -286,64 +342,14 @@ button {
   .App-portfolio .item {
     margin: 0 12px;
     width: 420px;
-    height: 930px;
+    height: 1200px;
   }
 
   .App-portfolio .item.active {
-    width: 360px;
+    width: 630px;
   }
 
   .App-portfolio .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  }
-}
-
-
-@media (min-width: 330px) and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-
-  .App-portfolio .item {
-    margin: 0 12px;
-    width: 420px !important;
-    height: 930px !important;
-  }
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  h3 {
-    margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
-  }
-
-  .line-title {
-    width: 250px;
-  }
-
-  /* -------- Landing page ------- */
-  .App-portfolio {
-    padding: 30px 15px 20px;
-  }
-
-  .App-portfolio .item {
-    margin: 0 10px;
-    width: 200px;
-    height: 580px;
-  }
-
-  .App-portfolio .item.active {
-    width: 270px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-  }
-
-  .App-portfolio .item-desc {
-    padding: 0 14px 5px;
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
   }
