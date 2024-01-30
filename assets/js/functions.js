@@ -7,11 +7,11 @@ $(document).ready(function () {
     scrollController = null;
   $(this).on('mousewheel DOMMouseScroll', function (e) {
 
-    if (!($('.outer-nav').hasClass('is-vis'))) {
+    if ($('.outer-nav').hasClass('is-vis')) {
 
       e.preventDefault();
 
-      var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
+      var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 10;
 
       if (delta > 50 && canScroll) {
         canScroll = false;
