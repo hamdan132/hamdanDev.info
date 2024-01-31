@@ -223,6 +223,9 @@ button {
 }
 
 /******** Middle section CSS End *******/
+.owl-nav.disabled,.owl-dots{
+  display: none !important;
+}
 
 /***** responsive css Start ******/
 
@@ -320,9 +323,6 @@ button {
     transform: translateY(calc(100% - 42px)) !important;
     -webkit-transform: translateY(calc(100% - 42px)) !important;
   }
-}
-.owl-nav.disabled,.owl-dots{
-  display: none !important;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px)  {
