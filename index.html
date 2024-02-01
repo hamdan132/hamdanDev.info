@@ -17,6 +17,15 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("areCz8LCU42MrSRX8");
+    })();
+  </script>
 </head>
 
 <body>
@@ -160,7 +169,7 @@
                         <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
                     c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
                     c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
-                      </g> 
+                      </g>
                     </svg>
                   </div>
                   <div class="slider--next">
@@ -380,7 +389,7 @@
               <div class="hire">
                 <h2>You want us to do</h2>
                 <!-- checkout formspree.io for easy form setup -->
-                <form class="work-request">
+                <form class="work-request" onsubmit="event.preventDefault(); sendMail();">
                   <div class="work-request--options">
                     <span class="options-a">
                       <input id="opt-1" type="checkbox" value="app design" />
@@ -468,20 +477,36 @@
                       <input id="email" type="email" spellcheck="false" />
                       <label for="email">Email</label>
                     </div>
+
                   </div>
-                  <input type="submit" value="Send Request" />
+                  <div class="work-request--information">
+                    <div class="information-message">
+                      <input id="message" type="message" spellcheck="false" />
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <button class="Submit">Send Request</button>
                 </form>
               </div>
             </li>
           </ul>
         </div>
       </div>
+
+
+
+      <!-- alert message -->
+      <!-- <div class="bg-alert-message" style="display: none;">    </div> -->
+        <div class="alert alert-custom" role="alert" style="display: none;">
+          <span id="alert-message"></span>
+          <span class="alert-close">&times;</span>
+        </div>
+  
+
+
+
+
       <div class="preview-wrapper">
-        <!-- <div>
-            <a href=".contact" class="fixed-facebook" target=""
-              ><i class="fa fa-envelope"></i> <span>Contact Us</span></a
-            >
-          </div> -->
         <div>
           <a href="https://www.fiverr.com/space_techstore?public_mode=true" class="fixed-tumblr" target="_blank"><img
               src="assets/img/Fiverr.png" style="height: 35%" />
@@ -712,120 +737,7 @@
           '<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>'
         );
     </script>
-    <script>
-
-
-
-      // perloader
-
-
-      $(window).on("load", function () {
-        $(".preloader").addClass("active");
-        setTimeout(function () {
-          $(".preloader").addClass("done");
-        }, 1500);
-      });
-
-
-
-      // typed
-
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var typed = new Typed("#typed", {
-          stringsElement: "#typed-strings",
-          typeSpeed: 40,
-          backSpeed: 20,
-          startDelay: 0,
-          loop: true,
-          loopCount: Infinity,
-        });
-
-        document.querySelector(".loop").addEventListener("click", function () {
-          toggleLoop(typed);
-        });
-      });
-
-
-
-
-      /*=============== SHOW model history ===============*/
-      const showmodel1 = (openButton, modelContent) => {
-        const openBtn = document.getElementById(openButton),
-          modelContainer = document.getElementById(modelContent)
-
-        if (openBtn && modelContainer) {
-          openBtn.addEventListener('click', () => {
-            modelContainer.classList.add('show-model')
-          })
-        }
-      }
-      showmodel1('open-model1', 'model-container')
-
-      /*=============== CLOSE model history ===============*/
-      const closeBtn1 = document.querySelectorAll('.close-model')
-
-      function closemodel1() {
-        const modelContainer = document.getElementById('model-container')
-        modelContainer.classList.remove('show-model')
-      }
-      closeBtn1.forEach(c => c.addEventListener('click', closemodel1))
-
-
-
-
-
-
-
-      /*=============== SHOW model experience ===============*/
-      const showmodel2 = (openButton, modelContent) => {
-        const openBtn = document.getElementById(openButton),
-          modelContainer = document.getElementById(modelContent)
-
-        if (openBtn && modelContainer) {
-          openBtn.addEventListener('click', () => {
-            modelContainer.classList.add('show-model')
-          })
-        }
-      }
-      showmodel2('open-model2', 'model-container-2')
-
-      /*=============== CLOSE model experience ===============*/
-      const closeBtn2 = document.querySelectorAll('.close-model-2')
-
-      function closemodel2() {
-        const modelContainer = document.getElementById('model-container-2')
-        modelContainer.classList.remove('show-model')
-      }
-      closeBtn2.forEach(c => c.addEventListener('click', closemodel2))
-
-
-
-
-      /*=============== SHOW model goals ===============*/
-      const showmodel3 = (openButton, modelContent) => {
-        const openBtn = document.getElementById(openButton),
-          modelContainer = document.getElementById(modelContent)
-
-        if (openBtn && modelContainer) {
-          openBtn.addEventListener('click', () => {
-            modelContainer.classList.add('show-model')
-          })
-        }
-      }
-      showmodel2('open-model3', 'model-container-3')
-
-      /*=============== CLOSE model goals ===============*/
-      const closeBtn3 = document.querySelectorAll('.close-model-3')
-
-      function closemodel3() {
-        const modelContainer = document.getElementById('model-container-3')
-        modelContainer.classList.remove('show-model')
-      }
-      closeBtn3.forEach(c => c.addEventListener('click', closemodel3))
-
-
-
+    <script src="assets/js/main.js">
     </script>
 
     <script src="assets/js/typed/typed.umd.js"></script>
