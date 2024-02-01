@@ -866,13 +866,13 @@ body {
 
   .intro--banner h1 {
     font-size: 55px;
-     width:60%;
+    width: 60%;
   }
 
   .intro--banner img {
     width: 430px
   }
-  
+
 
 
 }
@@ -892,9 +892,12 @@ body {
 
 }
 
-@media (max-width: 1300px) {  .intro--banner h1 {
-  width:60%;
-  }}
+@media (max-width: 1300px) {
+  .intro--banner h1 {
+    width: 60%;
+  }
+}
+
 @media (max-width: 600px) {
   .intro--banner {
     height: 360px
@@ -902,7 +905,7 @@ body {
 
   .intro--banner h1 {
     font-size: 45px;
-    width:100% !important;
+    width: 100% !important;
   }
 
   #typed {
@@ -912,7 +915,14 @@ body {
   .intro--banner img {
     display: none
   }
+
+  .work-request--information input[type="message"],
+  .work-request--information input[type="text"],
+  .work-request--information input[type="email"] {
+    font-size: 14px !important;
+  }
 }
+
 .intro--banner img {
   width: 52%;
 }
@@ -1416,7 +1426,8 @@ body {
   .history-text p {
     font-size: 12px !important;
   }
-  .model__content{
+
+  .model__content {
     padding: 2rem 2rem 8rem !important;
   }
 }
@@ -1636,8 +1647,9 @@ body {
 
 .work-request--options label:hover {
   border: 2px solid #fff;
-  background:var(--primary);
+  background: var(--primary);
 }
+
 .work-request--options label {
   display: block;
   width: 200px;
@@ -1687,7 +1699,8 @@ body {
   justify-content: space-between;
   margin-bottom: 30px
 }
-.work-request--information .information-message{
+
+.work-request--information .information-message {
   position: relative;
   width: 100%;
   height: 50px;
@@ -1710,7 +1723,7 @@ body {
 .work-request--information input[type="email"] {
   width: 100%;
   padding: 0 0 5px 0;
-  background-color: transparent;
+  background-color: var(--black);
   border: none;
   border-bottom: 1px solid #fff;
   border-radius: 0;
@@ -1721,7 +1734,7 @@ body {
 .work-request--information input[type="text"]:focus,
 .work-request--information input[type="email"]:focus {
   outline: none;
-  background-color: var(--black)
+  background-color: var(--black);
 }
 
 .work-request--information label {
@@ -1736,8 +1749,10 @@ body {
 .work-request--information input:focus+label,
 .work-request--information input.has-value+label {
   top: -13px;
-  font-size: 14px
+  font-size: 14px;
+  
 }
+
 
 @media (max-width: 767px) {
   .work-request--options {
@@ -2514,11 +2529,12 @@ body {
   .intro--banner img {
     width: 50%;
   }
+
   .skill {
-  
+
     min-height: 30px;
     margin: 2px 0;
-}
+  }
 }
 
 
@@ -2527,12 +2543,16 @@ body {
 
 
 /* alert-custom */
-.bg-alert-message{position: absolute;
+.bg-alert-message {
+  position: absolute;
   top: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: #00000099;}
+  /* background: #00000099; */
+}
+
+
 .alert-custom {
   position: fixed;
   top: 50%;
