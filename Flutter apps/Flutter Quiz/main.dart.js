@@ -61683,7 +61683,7 @@ A.a3K.prototype={
 $0(){this.a.e="result-screen"},
 $S:0}
 A.EI.prototype={
-X(a){var s=null,r=A.an4(s,s,new A.pY("assets/img/quiz-logo.png",s,s)),q=A.mj("Learn Flutter the fun way!",A.agc().$2$color$fontSize(B.i,22),s),p=A.ama(s,s,B.f3,s,s,s,s,s,s,B.i,s,s,s,s,s,s,s,s,s,s)
+X(a){var s=null,r=A.an4(s,s,new A.pY("Flutter apps/Flutter Quiz/assets/img/quiz-logo.png",s,s)),q=A.mj("Learn Flutter the fun way!",A.agc().$2$color$fontSize(B.i,22),s),p=A.ama(s,s,B.f3,s,s,s,s,s,s,B.i,s,s,s,s,s,s,s,s,s,s)
 return A.qa(A.zJ(A.a([new A.rk(r,300,B.xA,s),B.uO,q,B.uO,new A.IW(this.c,s,s,s,p,B.u,s,!1,s,!0,new A.IX(B.LN,B.zv,s),s)],t.E),B.de,B.dQ,B.dR),s,s)}}
 A.iW.prototype={
 gp(a){return this.b},
