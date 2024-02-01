@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("fonts/Montserrat-Regular.woff") format("woff"), url("fonts/Montserrat-Regular.ttf") format("truetype"), url("fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+
+* {
+  font-family: Montserrat;
+}
+
 :root {
   --primary: #fd5555;
   --primary-hover: #ff1b1b;
@@ -13,15 +25,17 @@ body {
   position: relative;
   display: flex;
 }
-.contentBox{
+
+.contentBox {
   max-width: 1280px;
 }
 
-.close{
-  font-size:50px;
-  position:absolute;
-  right:10vh;
-  color:var(--primary);
+.close {
+  font-size: 40px;
+  position: absolute;
+  right: 10vh;
+  top: 0px;
+  color: var(--primary);
 }
 
 
@@ -66,7 +80,7 @@ ul:hover {
   display: flex;
   justify-content: center;
   width: 400px;
-  font-size: 32px;
+  font-size: 28px;
   padding-bottom: 20px;
   color: var(--primary);
 }
@@ -98,7 +112,7 @@ ul:hover {
 
 .item-btn button {
   color: var(--primary);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   font-family: cursive;
   background: none;
@@ -109,19 +123,30 @@ ul:hover {
 @media (min-width: 768px) and (max-width: 991px) {
 
   .line-title {
-      width: 330px;
-      font-size: 45px;
-      padding-bottom: 25px;
+    width: 330px;
+    font-size: 35px;
+    padding-bottom: 25px;
   }
 }
 
 @media (min-width: 330px) and (max-width: 767px) {
 
   .line-title {
-      width: 250px;
+    width: 250px;
   }
-  .close{
-    font-size: 50px;
-    right: 2vh;
+
+  .close {
+    font-size: 35px;
+    right: 0vh;
+    top: -28vw;
+  }
+
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
+  }
+
+  li a {
+    font-size: 12px;
   }
 }
