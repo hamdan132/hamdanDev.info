@@ -12,7 +12,7 @@
     content="Full Stack Designer, Interactive Design, Typography, Responsive Design, User Friendly, Website Development, App Development, Graphic Design, UI/UX Design, Freelance Designer, Pakistan, Portfolio, Hamdan Ibne Muneer, HTML, CSS, SASS, Flex, Grid, Bootstrap, JavaScript, WordPress, DART, FLUTTER, GIT, GITHUB, Photoshop, Illustrator, Adobe Xd, CorelDraw, FIGMA">
 
   <meta name="author" content="Hamdan ibne Muneer" />
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="assets/css/main-app.css" />
@@ -36,23 +36,18 @@
     <div class="line-title-container">
       <h2 class="line-title">App Portfolio</h2>
     </div>
-    <div class="owl-carousel custom-carousel owl-theme">
-
-      <div class="item active" style="background-image: url('flutter apps/DiceRoller.png');">
+    <div class="just-a-owl">
+      <div class="item active" style="background-image: url('/Flutter apps/DiceRoller.gif');">
         <div class="item-desc">
           <h3>Dice Roller</h3>
           <p>Dice Roller is a Flutter app that simulates the roll of a dice. The app has a simple and user-friendly
             interface, with a single button to roll the dice. When the button is pressed, the generates a random number
             between 1 and 6, and displays the corresponding dice image.</p>
-          <!-- <iframe src="https://github.com/hamdan132/hamdanDev.info/tree/main/Flutter%20apps/Dice%20Roller/index.html"
-            frameborder="0" allowfullscreen>
-            <div class="item-btn"><button>View App</button></div>
-          </iframe> -->
         </div>
       </div>
 
 
-      <div class="item" style="background-image: url('flutter apps/Flutter\ Quiz.png');">
+      <div class="item" style="background-image: url('/Flutter apps/Flutter-Quiz.gif');">
         <div class="item-desc">
           <h3>Flutter Quiz</h3>
           <p>This is a Flutter app for a simple quiz game. The start screen displays a "Let's Start" button that, when
@@ -60,41 +55,32 @@
             options. Once all questions have been answered, the app moves to the results screen, which displays the
             user's choices and their corresponding correct or incorrect answers. The app uses a gradient background and
             a dark theme for an appealing visual design.</p>
-          <a src="Flutter apps/Flutter Quiz/index.html" frameborder="0"
-            allowfullscreen>
-            <div class="item-btn"><button>View App</button></div>
-          </a>
+
         </div>
       </div>
 
 
-      <div class="item" style="background-image: url('flutter apps/expenseTracker.png');">
+      <div class="item" style="background-image: url('/Flutter apps/ExpenseTracker.gif');">
         <div class="item-desc">
           <h3>Expense Tracker</h3>
           <p>This Flutter app helps users track expenses with a responsive layout, chart, and list of individual
             expenses. Add and delete expenses using a bottom sheet, with undo option. The app uses shared preferences
             to save and expenses locally, aiming for an easy-to- and visually appealing.</p>
-          <!-- <iframe src="https://hamdan132.github.io/hamdanDev.info/Flutter apps/Expense Tracker/index.html" frameborder="0" allowfullscreen>
-              <div class="item-btn"><button>View App</button></div>
-            </iframe> -->
+
         </div>
       </div>
 
 
-      <div class="item" style="background-image: url('flutter apps/calculator-02.png');">
+      <div class="item" style="background-image: url('/Flutter apps/Calculator-2.gif');">
         <div class="item-desc">
           <h3>Calculator-02</h3>
           <p>This is a Flutter calculator app with a customizable design. It has a history page to review previous
             calculations.The calculator has large buttons with clear labels for easy use. The history page keeps a
             record of all calculations, allowing users to review them at any time. The delete button clears the most
             recent entry.</p>
-          <!-- <iframe src="https://hamdan132.github.io/hamdanDev.info/Flutter apps/calculator-02/index.html" frameborder="0" allowfullscreen>
-              <div class="item-btn"><button>View App</button></div>
-            </iframe> -->
         </div>
       </div>
 
-    </div>
     </div>
   </section>
 
@@ -103,13 +89,13 @@
 
   <script>
     $(document).ready(function () {
-      $(".custom-carousel").owlCarousel({
-        autoWidth: true,
-        loop: true
-      });
+      // $(".just-a-owl").owlCarousel({
+      //   autoWidth: true,
+      //   loop: true
+      // });
 
-      $(".custom-carousel .item").click(function () {
-        $(".custom-carousel .item").not($(this)).removeClass("active");
+      $(".just-a-owl .item").click(function () {
+        $(".just-a-owl .item").not($(this)).removeClass("active");
         $(this).toggleClass("active");
       });
     });
