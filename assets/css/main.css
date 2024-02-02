@@ -1750,7 +1750,7 @@ body {
 .work-request--information input.has-value+label {
   top: -13px;
   font-size: 14px;
-  
+
 }
 
 
@@ -2589,4 +2589,17 @@ body {
   cursor: pointer;
   font-size: 1.5rem;
   color: #fff;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  /* Adjust scrolling-related styles here */
+  html,
+  body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 20px;
+    /* Adjust as needed */
+  }
 }

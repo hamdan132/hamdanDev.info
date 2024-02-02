@@ -1,27 +1,20 @@
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
 
 $(document).ready(function () {
-
-  // DOMMouseScroll included for firefox support
   var canScroll = true,
     scrollController = null;
   $(this).on('mousewheel DOMMouseScroll', function (e) {
-
     if ($('.outer-nav').hasClass('is-vis')) {
-
       e.preventDefault();
-
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 10;
-
-      if (delta > 50 && canScroll) {
+      if (delta > 20 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
         scrollController = setTimeout(function () {
           canScroll = true;
         }, 800);
         updateHelper(1);
-      }
-      else if (delta < -50 && canScroll) {
+      } else if (delta < -20 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
         scrollController = setTimeout(function () {
@@ -29,10 +22,9 @@ $(document).ready(function () {
         }, 800);
         updateHelper(-1);
       }
-
     }
-
   });
+
 
   $('.side-nav li, .outer-nav li').click(function () {
 
