@@ -20,6 +20,14 @@ body {
   background-color: black;
 }
 
+.line-title {
+  width: 330px;
+  font-size: 35px;
+  padding-bottom: 25px;
+  margin-bottom: 32px;
+  font-size: 35px !important;
+}
+
 .glassmorphic-card {
   justify-content: center;
   position: relative;
@@ -28,10 +36,14 @@ body {
 
 .contentBox {
   max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .close {
-  font-size: 40px;
+  font-size: 50px;
   position: absolute;
   right: 10vh;
   top: 0px;
@@ -120,33 +132,144 @@ ul:hover {
   margin: 10px 0;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .line-title {
-    width: 330px;
-    font-size: 35px;
-    padding-bottom: 25px;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
   }
-}
-
-@media (min-width: 330px) and (max-width: 767px) {
 
   .line-title {
-    width: 250px;
+    margin-bottom: 32px;
+  }
+
+  li a {
+    font-size: 18px !important;
   }
 
   .close {
-    font-size: 35px;
-    right: 0vh;
-    top: -28vw;
+    font-size: 50px;
+    right: 2vh;
+    top: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
   }
 
+  .line-title {
+    width: 330px;
+    font-size: 40px;
+    padding-bottom: 25px;
+    margin-bottom: 32px;
+    font-size: 35px !important;
+  }
+
+  .close {
+    font-size: 50px;
+    right: 2vh;
+    top: 5px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
+  }
+
+  .line-title {
+    width: 330px;
+    font-size: 36px;
+    padding-bottom: 25px;
+    margin-bottom: 20px !important;
+    font-size: 30px !important;
+  }
+
+  .close {
+    font-size: 45px;
+    top: 5px;
+    right: 2vh;
+  }
+
+  li a {
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
   .glassmorphic-card ul {
     padding: 4px 10px;
     margin: 7px 5px 0 0;
   }
 
   li a {
-    font-size: 12px;
+    font-size: 13px !important;
+  }
+
+
+
+  .line-title {
+    width: 250px !important;
+    padding-bottom: 10px;
+    margin-bottom: 20px !important;
+    font-size: 25px !important;
+  }
+
+  .close {
+    font-size: 40px;
+    right: 2vh;
+    top: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 499px) {
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
+  }
+
+
+
+  li a {
+    font-size: 12px !important;
+  }
+
+  .line-title {
+    width: 250px !important;
+    padding-bottom: 10px;
+    margin-bottom: 10px !important;
+    font-size: 25px !important;
+  }
+
+  .close {
+    font-size: 35px;
+    right: 2vh;
+    top: 5px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .glassmorphic-card ul {
+    padding: 4px 10px;
+    margin: 7px 5px 0 0;
+  }
+
+  .line-title {
+    margin-bottom: 10px !important;
+    font-size: 24px !important;
+  }
+
+  li a {
+    font-size: 12px !important;
+  }
+
+  .close {
+    font-size: 30px;
+    right: 2vh;
+    top: 5px;
   }
 }
