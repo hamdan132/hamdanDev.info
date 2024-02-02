@@ -42,8 +42,11 @@ const showmodel1 = (openButton, modelContent) => {
     openBtn.addEventListener('click', () => {
       modelContainer.classList.add('show-model')
     })
+    // Add click event listener to modelContainer
+    modelContainer.addEventListener('click', closemodel1)
   }
 }
+  
 showmodel1('open-model1', 'model-container')
 
 /*=============== CLOSE model history ===============*/
@@ -70,6 +73,9 @@ const showmodel2 = (openButton, modelContent) => {
     openBtn.addEventListener('click', () => {
       modelContainer.classList.add('show-model')
     })
+ 
+    // Add click event listener to modelContainer
+    modelContainer.addEventListener('click', closemodel2)
   }
 }
 showmodel2('open-model2', 'model-container-2')
@@ -95,9 +101,12 @@ const showmodel3 = (openButton, modelContent) => {
     openBtn.addEventListener('click', () => {
       modelContainer.classList.add('show-model')
     })
+ 
+    // Add click event listener to modelContainer
+    modelContainer.addEventListener('click', closemodel3)
   }
 }
-showmodel2('open-model3', 'model-container-3')
+showmodel3('open-model3', 'model-container-3')
 
 /*=============== CLOSE model goals ===============*/
 const closeBtn3 = document.querySelectorAll('.close-model-3')
