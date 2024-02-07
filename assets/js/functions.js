@@ -1,18 +1,10 @@
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
-
 $(document).ready(function () {
-
-  // DOMMouseScroll included for firefox support
   var canScroll = true,
     scrollController = null;
   $(this).on('mousewheel DOMMouseScroll', function (e) {
-
     if ($('.outer-nav').hasClass('is-vis')) {
-
       e.preventDefault();
-
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 10;
-
       if (delta > 50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
@@ -20,8 +12,7 @@ $(document).ready(function () {
           canScroll = true;
         }, 800);
         updateHelper(1);
-      }
-      else if (delta < -50 && canScroll) {
+      } else if (delta < -50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
         scrollController = setTimeout(function () {
@@ -29,9 +20,7 @@ $(document).ready(function () {
         }, 800);
         updateHelper(-1);
       }
-
     }
-
   });
 
   $('.side-nav li, .outer-nav li').click(function () {
@@ -90,16 +79,17 @@ $(document).ready(function () {
       lastItem = $('.side-nav').children().length - 1,
       nextPos = 0;
 
-    if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
-      if (curPos !== lastItem) {
-        nextPos = curPos + 1;
-        updateNavs(nextPos);
-        updateContent(curPos, nextPos, lastItem);
-      }
+      if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
+        if (curPos !== lastItem) {
+          nextPos = curPos + 1;
+          updateNavs(nextPos);
+          updateContent(curPos, nextPos, lastItem);
+        }
       else {
         updateNavs(nextPos);
         updateContent(curPos, nextPos, lastItem);
       }
+      mainContent.scrollTop += delta;
     }
     else if (param.type === "swipedown" || param.keyCode === 38 || param < 0) {
       if (curPos !== 0) {
@@ -113,6 +103,7 @@ $(document).ready(function () {
         updateContent(curPos, nextPos, lastItem);
       }
     }
+      e.preventDefault();
 
   }
 
@@ -150,29 +141,40 @@ $(document).ready(function () {
     }
 
   }
+  
+  
+  var mainContent = document.getElementById('main-content');
+  var mc = new Hammer(mainContent);
+  mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL});
+  mc.on('swipeup swipedown', function (e) {
+    e.preventDefault();
+    updateHelper(e);
+  });
 
-  function outerNav() {
+  function updateHelper(param) {
+    var curActive = $('.side-nav').find('.is-active'),
+      curPos = $('.side-nav').children().index(curActive),
+      lastItem = $('.side-nav').children().length - 1,
+      nextPos = 0,
+      delta;
 
-    $('.header--nav-toggle').click(function () {
+    if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
+      if (curPos !== lastItem) {
+        nextPos = curPos + 1;
+        updateNavs(nextPos);
+        updateContent(curPos, nextPos, lastItem);
+      }
+      delta = -100;
+    } else if (param.type === "swipedown" || param.keyCode === 38 || param < 0) {
+      if (curPos !== 0) {
+        nextPos = curPos - 1;
+        updateNavs(nextPos);
+        updateContent(curPos, nextPos, lastItem);
+      }
+      delta = 100;
+    }
 
-      $('.perspective').addClass('perspective--modalview');
-      setTimeout(function () {
-        $('.perspective').addClass('effect-rotate-left--animate');
-      }, 25);
-      $('.outer-nav, .outer-nav li, .outer-nav--return').addClass('is-vis');
-
-    });
-
-    $('.outer-nav--return, .outer-nav li').click(function () {
-
-      $('.perspective').removeClass('effect-rotate-left--animate');
-      setTimeout(function () {
-        $('.perspective').removeClass('perspective--modalview');
-      }, 400);
-      $('.outer-nav, .outer-nav li, .outer-nav--return').removeClass('is-vis');
-
-    });
-
+    mainContent.scrollTop += delta;
   }
 
   function workSlider() {
@@ -273,7 +275,7 @@ $(document).ready(function () {
 
   }
 
-  
+
 
 
   outerNav();
