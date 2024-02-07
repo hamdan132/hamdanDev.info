@@ -208,10 +208,10 @@ function showAlert(message, type) {
   bgElement.style.display = 'block'
   document.getElementById("alert-message").innerText = message
   if (type === "error") {
-    alertElement.style.backgroundColor = "#fd5555"
+    alertElement.style.backgroundColor = "#353635"
     bgElement.style.backgroundColor = "#000000d6"
   } else {
-    alertElement.style.backgroundColor = "#55fd55"
+    alertElement.style.backgroundColor = "#fd5555"
     bgElement.style.backgroundColor = "#000000d6"
   }
 
