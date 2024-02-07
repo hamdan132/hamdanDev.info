@@ -23,6 +23,7 @@ $(document).ready(function () {
     }
   });
 
+
   $('.side-nav li, .outer-nav li').click(function () {
 
     if (!($(this).hasClass('is-active'))) {
