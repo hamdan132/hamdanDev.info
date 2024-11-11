@@ -81,8 +81,8 @@ a:hover {
 
 h3 {
   margin: 0 0 10px;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 button {
@@ -172,9 +172,9 @@ button {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   cursor: pointer;
-  width: calc(var(--width) * 3);
+  width: calc(var(--width) * 2.5);
   background-size: cover;
-  height: calc(var(--height) * 3);
+  height: calc(var(--height) * 2.2);
 }
 
 .App-portfolio .item.active {
@@ -199,7 +199,7 @@ button {
 }
 
 .App-portfolio .item-desc {
-  padding: 0 24px 12px;
+  padding: 0 24px 14px;
   color: #fff;
   position: relative;
   z-index: 1;
@@ -221,6 +221,7 @@ button {
 }
 
 .App-portfolio .item-desc p {
+  font-size: 13px;
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
@@ -246,8 +247,8 @@ button {
 
 @media (min-width: 1200px) and (max-width: 1350px) {
   .App-portfolio .item {
-    width: calc(var(--width) * 2.8);
-    height: calc(var(--height) * 2.8);
+    width: calc(var(--width) * 2.3);
+    height: calc(var(--height) * 2.1);
   }
 }
 
@@ -263,7 +264,8 @@ button {
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 17px;
+    line-height: 18px;
   }
 
 
@@ -279,8 +281,8 @@ button {
 
   .App-portfolio .item {
     margin: 0 12px;
-    width: calc(var(--width) * 2.5);
-    height: calc(var(--height) * 2.5);
+    width: calc(var(--width) * 2.2);
+    height: calc(var(--height) * 2);
   }
 
   /* .App-portfolio .item-desc {
