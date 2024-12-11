@@ -2352,8 +2352,9 @@ body {
 }
 
 .resume a h2:hover {
-  color: var(--primary-hover);
-  transition: color 300ms ease;
+  /* color: var(--primary-hover); */
+  text-shadow:2px 2px 10px#ffffffa1;
+  transition: text-shadow 300ms ease;
 }
 
 .resume {
@@ -2516,7 +2517,7 @@ body {
 @media screen and (min-width: 576px) {
   .model__content {
     margin: auto;
-    width: 600px;
+    width: 650px;
     border-radius: 1.25rem;
   }
 
