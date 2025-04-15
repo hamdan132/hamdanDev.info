@@ -4,7 +4,7 @@
 <head>
   <title>Space Tech Store</title>
   <meta charset="utf-8" />
-  <!-- <meta http-equiv="refresh" content="0; url=https://hamdandev.space"> -->
+  <meta http-equiv="refresh" content="0; url=https://hamdandev.space">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description"
@@ -140,7 +140,7 @@
                       </a>
                     </li>
                     <li class="slider--item slider--item-center">
-                      <a href="Website-portfolio.html" >
+                      <a href="Website-portfolio.html">
                         <div class="slider--item-image">
                           <img src="assets/img/website.jpg" alt="Website" />
                         </div>
@@ -152,7 +152,7 @@
                       </a>
                     </li>
                     <li class="slider--item slider--item-right">
-                      <a href="app.html" >
+                      <a href="app.html">
                         <div class="slider--item-image">
                           <img src="assets/img/app.jpg" alt="App" />
                         </div>
@@ -528,8 +528,8 @@
               class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
         </div>
         <div>
-          <a href="https://www.instagram.com/hamdan_o_y/" class="fixed-instagrem"
-            target="_blank"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+          <a href="https://www.instagram.com/hamdan_o_y/" class="fixed-instagrem" target="_blank"><i
+              class="fa fa-instagram"></i> <span>Instagram</span></a>
         </div>
       </div>
     </div>
@@ -658,7 +658,9 @@
               <div class="history-text">
                 <h5>VisionBird Technologies</h5>
                 <span>2023 - 2024 </span>
-                <p>Visionbird Technology is seeking a Web and Graphic Designer with a passion for creating captivating user interfaces. Join our team to design visually stunning websites and graphics. Flutter app development opportunities await, making it an exciting journey in June 2023 and September 2024.</p>
+                <p>Visionbird Technology is seeking a Web and Graphic Designer with a passion for creating captivating
+                  user interfaces. Join our team to design visually stunning websites and graphics. Flutter app
+                  development opportunities await, making it an exciting journey in June 2023 and September 2024.</p>
               </div>
             </div>
             <div class="history-item">
@@ -666,7 +668,9 @@
               <div class="history-text">
                 <h5>Syntax Digital</h5>
                 <span>2024 - Continued </span>
-                <p>Designed visually captivating websites and engaging Code as part of a creative team. Collaborated on UI/UX projects and contributed to a variety of digital assets. Also supported Flutter app development, enriching the design process and enhancing user experiences.</p>
+                <p>Designed visually captivating websites and engaging Code as part of a creative team. Collaborated on
+                  UI/UX projects and contributed to a variety of digital assets. Also supported Flutter app development,
+                  enriching the design process and enhancing user experiences.</p>
               </div>
             </div>
           </div>
@@ -739,9 +743,12 @@
     <script src="assets/js/functions.js"></script>
 
     <script>
-    if (window.location.pathname === "/index.html") {
-      window.location.replace("https://hamdandev.space");
-    }
+      const currentUrl = window.location.href;
+      const baseUrl = "https://hamdandev.space/";
+
+      if (currentUrl.endsWith("/index.html") || currentUrl.endsWith("/index.html#")) {
+        window.location.replace(baseUrl);
+      }
       window.jQuery ||
         document.write(
           '<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>'
@@ -754,4 +761,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="assets/js/disableInspection.js"></script>
 </body>
+
 </html>
