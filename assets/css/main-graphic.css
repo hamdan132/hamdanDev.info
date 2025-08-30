@@ -31,7 +31,7 @@ body {
 .graphic-portfolio {
   padding: 20px;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   position: relative;
 }
 
@@ -125,34 +125,6 @@ body {
   transform: scale(1.05);
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--overlay-bg);
-  color: var(--light-text);
-  padding: 20px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.mosaic-item:hover .overlay {
-  transform: translateY(0);
-}
-
-.overlay h3 {
-  margin: 0 0 5px 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.overlay p {
-  margin: 0;
-  font-size: 14px;
-  color: #cccccc;
-}
 
 /* Make some items larger for mosaic effect */
 .mosaic-item:nth-child(3n+1) {
@@ -327,11 +299,11 @@ body {
   }
 }
 .preview-wrapper {
-  position: fixed;
-  top: 130px;
-  right: 4px;
+  position: relative;
+  top: 30px;
+  right: 10px;
+  left: 10px;
   z-index: 10;
-
 }
 
 .preview-wrapper a {
