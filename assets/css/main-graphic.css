@@ -1,0 +1,407 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/css/fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("../assets/css/fonts/Montserrat-Regular.woff") format("woff"), url("../assets/css/fonts/Montserrat-Regular.ttf") format("truetype"), url("../assets/css/fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #fd5555;
+  --primary-hover: #ff1b1b;
+  --secondary: #050c16;
+  --dark-bg: #000000;
+  --light-text: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  background-color: var(--dark-bg);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.graphic-portfolio {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* -------- title style ------- */
+.line-title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.line-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  font-size: 28px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  text-align: center;
+}
+
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.line-title::after {
+  width: 32px;
+  background: var(--primary);
+}
+
+.close {
+  font-size: 50px;
+  position: absolute;
+  right: 10vh;
+  top: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  z-index: 100;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: var(--primary-hover);
+}
+
+/* Mosaic Grid Layout */
+.mosaic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}
+
+.mosaic-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1a1a1a;
+}
+
+.mosaic-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(253, 85, 85, 0.3);
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mosaic-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--overlay-bg);
+  color: var(--light-text);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.mosaic-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* Make some items larger for mosaic effect */
+.mosaic-item:nth-child(3n+1) {
+  grid-column: span 2;
+}
+
+.mosaic-item:nth-child(5n+2) {
+  grid-row: span 2;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: block;
+  object-fit: contain;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--primary);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+}
+
+.close-modal:hover {
+  color: var(--primary-hover);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .mosaic-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+  }
+  
+  .close {
+    right: 5vh;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .graphic-portfolio {
+    padding: 15px;
+  }
+  
+  .mosaic-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 180px;
+    grid-gap: 15px;
+  }
+  
+  .line-title {
+    width: 300px;
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+  
+  .close {
+    font-size: 40px;
+    right: 3vh;
+    top: 15px;
+  }
+  
+  .overlay {
+    padding: 15px;
+  }
+  
+  .overlay h3 {
+    font-size: 16px;
+  }
+  
+  .overlay p {
+    font-size: 12px;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+  
+  .close-modal {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mosaic-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 12px;
+  }
+  
+  .mosaic-item:nth-child(3n+1),
+  .mosaic-item:nth-child(5n+2) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .line-title {
+    width: 250px;
+    font-size: 22px;
+    padding-bottom: 12px;
+  }
+  
+  .close {
+    font-size: 35px;
+    right: 2vh;
+    top: 10px;
+  }
+  
+  .modal {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    max-width: 98%;
+    max-height: 98%;
+    border-radius: 10px;
+  }
+  
+  .close-modal {
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    top: 8px;
+    right: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mosaic-container {
+    grid-auto-rows: 180px;
+  }
+  
+  .line-title {
+    width: 220px;
+    font-size: 20px;
+  }
+  
+  .close {
+    font-size: 30px;
+    right: 1vh;
+  }
+  
+  .overlay {
+    padding: 12px;
+  }
+  
+  .overlay h3 {
+    font-size: 14px;
+  }
+  
+  .overlay p {
+    font-size: 11px;
+  }
+}
+
+/* Animation for modal appearance */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  animation: modalFadeIn 0.3s ease;
+}
+
+/* Loading state for images */
+.mosaic-item {
+  background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.mosaic-item img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mosaic-item img.loaded {
+  opacity: 1;
+  background: none;
+  animation: none;
+}
+
+/* Ensure proper image loading */
+.mosaic-item img {
+  transition: opacity 0.3s ease;
+}
+
+.mosaic-item img[src] {
+  opacity: 1;
+}

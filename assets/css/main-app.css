@@ -1,538 +1,387 @@
-@charset "utf-8";
-
-/******* Fonts Import Start **********/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/********* Fonts Face CSS End **********/
-
-/******* Common Element CSS Start ******/
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 :root {
-  --primary: #fd5555;
-  --primary-hover: #ff1b1b;
-  --secondary: #050c16;
-  --height: 217px;
-  --width: 100px;
+    --primary: #fd5555;
+    --primary-hover: #ff1b1b;
+    --secondary: #000000;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    height: 100%;
 }
-
-.clear {
-  clear: both;
-}
-
-img {
-  max-width: 100%;
-  border: 0px;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-.close {
-  font-size: 50px;
-  position: absolute;
-  right: 10vh;
-  top: 2px;
-  color: var(--primary);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  outline: none;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-}
-
-a:focus,
-a:active,
-a:visited,
-a:hover {
-  text-decoration: none;
-  outline: none;
-}
-
-a:hover {
-  color: var(--primary-hover);
-}
-
-.line-title {
-  margin-bottom: 48px;
-  padding-bottom: 16px;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 700;
-  position: relative;
-  text-transform: capitalize;
-}
-
-h3 {
-  margin: 0 0 10px;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-button {
-  outline: none !important;
-}
-
-/******* Common Element CSS End *********/
 
 /* -------- title style ------- */
-.line-title-container {
-  display: flex;
-  justify-content: center;
-}
-
-.line-title {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 400px;
-  font-size: 40px;
-  padding-bottom: 20px;
-  color: var(--primary);
-}
-
-.line-title::before,
-.line-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  border-radius: 2px;
-}
-
-.App-portfolio .item .line-title::before {
-  width: 100%;
-  background: #f2f2f2;
-}
-
-.line-title::after {
-  width: 32px;
-  background: var(--primary);
-}
-
 .item-btn {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .item-btn button {
-  color: var(--primary);
-  font-size: 20px;
-  font-weight: 500;
-  font-family: cursive;
-  background: none;
-  border: none;
-  margin: 10px 0;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: cursive;
+    background: none;
+    border: none;
+    margin: 10px 0;
 }
 
-/******* Middle section CSS Start ******/
-/* -------- Landing page ------- */
-.App-portfolio {
-  padding: 60px 50px;
-  max-width: 1440px;
+.portfolio {
+    padding: 70px 20px 50px;
 }
 
-.just-a-owl {
-  display: flex;
+.app-card {
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.App-portfolio .owl-stage {
-  margin: 15px 0;
-  display: flex;
-  display: -webkit-flex;
+.app-card:hover {
+    transform: scale(1.05);
 }
 
-.App-portfolio .item {
-  margin: 0 15px;
-  display: flex;
-  display: -webkit-flex;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
-  background: #343434 no-repeat center center / cover;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  cursor: pointer;
-  width: calc(var(--width) * 2.5);
-  background-size: cover;
-  height: calc(var(--height) * 2.2);
+.app-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.App-portfolio .item.active {
-  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-}
-
-.App-portfolio .item:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-}
-
-.line-title::before {
-  width: 100%;
-  background: #f2f2f2;
-}
-
-.App-portfolio .item-desc {
-  padding: 0 24px 14px;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transform: translateY(calc(100% - 54px));
-  -webkit-transform: translateY(calc(100% - 54px));
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-}
-
-.App-portfolio .item.active .item-desc {
-  background-color: #0000006b;
-  height: calc(var(--height) * 3);
-  transform: none;
-  display: flex;
-  -webkit-transform: none;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.App-portfolio .item-desc p {
-  font-size: 13px;
-  opacity: 0;
-  -webkit-transform: translateY(32px);
-  transform: translateY(32px);
-  transition: all 0.4s ease-in-out 0.2s;
-  -webkit-transition: all 0.4s ease-in-out 0.2s;
-}
-
-.App-portfolio .item.active .item-desc p {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-
-/******** Middle section CSS End *******/
-.owl-nav.disabled,
-.owl-dots {
-  display: none !important;
-}
-
-/***** responsive css Start ******/
-
-
-@media (min-width: 1200px) and (max-width: 1350px) {
-  .App-portfolio .item {
-    width: calc(var(--width) * 2.3);
-    height: calc(var(--height) * 2.1);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  body {
-    display: block !important;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .line-title {
-    margin-bottom: 32px;
-  }
-
-  h3 {
-    font-size: 17px;
-    line-height: 18px;
-  }
-
-
-
-  .item-btn button {
-    font-size: 28px;
-  }
-
-  /* -------- Landing page ------- */
-  .App-portfolio {
-    padding: 50px 30px;
-  }
-
-  .App-portfolio .item {
-    margin: 0 12px;
-    width: calc(var(--width) * 2.2);
-    height: calc(var(--height) * 2);
-  }
-
-  /* .App-portfolio .item-desc {
-    transform: translateY(calc(100% - 46px));
-    -webkit-transform: translateY(calc(100% - 46px));
-  }   */
-  p {
-    font-size: 14px !important;
-  }
-
-  .close {
-    font-size: 50px;
-    right: 2vh;
-    top: 5px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    overflow: auto !important;
-  }
-
-  .just-a-owl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  h3 {
+.app-title {
     font-size: 18px;
-  }
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+    font-weight: 700;
+}
 
-  .line-title {
+.app-description {
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.line-title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.line-title {
     width: 330px;
     font-size: 35px;
     padding-bottom: 25px;
     margin-bottom: 32px;
     font-size: 35px !important;
-  }
+}
 
-  .App-portfolio p {
-    font-size: 13px;
-  }
+.line-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    font-size: 28px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    padding-top: 40px;
+}
 
-  .App-portfolio {
-    padding: 50px 30px 40px;
-  }
-
-  .item {
-    margin: 0 12px;
-    width: calc(var(--width) * 2.3) !important;
-    height: calc(var(--height) * 2.3) !important;
-  }
-
-  /* .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  } */
-
-  .close {
+.close {
     font-size: 50px;
-    right: 2vh;
-    top: 5px;
-  }
+    position: absolute;
+    right: 10vh;
+    top: 0px;
+    color: var(--primary);
+}
+
+.line-title::before,
+.line-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.line-title::before {
+    width: 100%;
+    background: #f2f2f2;
+}
+
+.line-title::after {
+    width: 32px;
+    background: var(--primary);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .line-title {
+        margin-bottom: 32px;
+    }
+
+    .close {
+        font-size: 50px;
+        right: 2vh;
+        top: 5px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .line-title {
+        width: 330px;
+        font-size: 40px;
+        padding-bottom: 25px;
+        margin-bottom: 32px;
+        font-size: 35px !important;
+    }
+
+    .close {
+        font-size: 50px;
+        right: 2vh;
+        top: 5px;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 767px) {
-  body {
-    overflow: auto !important;
-  }
 
-  .just-a-owl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .line-title {
+        width: 330px;
+        font-size: 36px;
+        padding-bottom: 25px;
+        margin-bottom: 20px !important;
+        font-size: 30px !important;
+    }
 
-
-
-  h3 {
-    margin: 0 0 5px !important;
-    font-size: 16px !important;
-  }
-
-  .line-title {
-    width: 330px;
-    font-size: 36px;
-    padding-bottom: 25px;
-    margin-bottom: 30px;
-    font-size: 36px !important;
-  }
-
-  .App-portfolio {
-    padding: 50px 30px 40px;
-  }
-
-  .App-portfolio .item-desc {
-    padding: 0 12px 12px;
-  }
-
-  .item {
-    margin: 0 12px;
-    width: calc(var(--width) * 1.9) !important;
-    height: calc(var(--height) * 1.9) !important;
-    margin: 10px !important;
-  }
-
-  /* .item-desc {
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-  } */
-
-  .close {
-    font-size: 45px;
-    top: 5px;
-    right: 2vh;
-  }
-
-  p {
-    font-size: 13px !important;
-  }
+    .close {
+        font-size: 45px;
+        top: 5px;
+        right: 2vh;
+    }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
+    .line-title {
+        width: 250px !important;
+        padding-bottom: 10px;
+        margin-bottom: 20px !important;
+        font-size: 25px !important;
+    }
 
-  body {
-    overflow: auto !important;
-  }
-
-  .just-a-owl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .App-portfolio {
-    padding: 30px 15px 20px !important;
-  }
-
-  .item {
-    margin: 0 12px;
-    width: calc(var(--width) * 2) !important;
-    height: calc(var(--height) * 2) !important;
-  }
-
-
-  p {
-    font-size: 11px !important;
-  }
-
-  h3 {
-    margin: 0 0 8px !important;
-    font-size: 19px !important;
-    line-height: 24px !important;
-  }
-
-  .line-title {
-    width: 250px !important;
-    padding-bottom: 10px;
-    margin-bottom: 10px !important;
-    font-size: 29px !important;
-  }
-
-  .close {
-    font-size: 40px;
-    right: 2vh;
-    top: 5px;
-  }
+    .close {
+        font-size: 40px;
+        right: 2vh;
+        top: 5px;
+    }
 }
 
-
 @media only screen and (max-width: 499px) {
+    .line-title {
+        width: 250px !important;
+        padding-bottom: 10px;
+        margin-bottom: 10px !important;
+        font-size: 25px !important;
+    }
 
-  body {
-    overflow: auto !important;
-  }
-
-  .just-a-owl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .App-portfolio .item-desc {
-    padding: 0 12px 12px !important;
-  }
-
-  .App-portfolio {
-    padding: 30px 15px 20px !important;
-  }
-
-  .item {
-    margin: 10px 12px !important;
-    width: calc(var(--width) * 1.3) !important;
-    height: calc(var(--height) * 1.3) !important;
-  }
-
-  p {
-    font-size: 9px !important;
-  }
-
-  h3 {
-    margin: 0 0 8px !important;
-    font-size: 19px !important;
-    line-height: 24px !important;
-  }
-
-  .line-title {
-    width: 250px !important;
-    padding-bottom: 10px;
-    margin-bottom: 10px !important;
-    font-size: 25px !important;
-  }
-
-  .close {
-    font-size: 35px;
-    right: 2vh;
-    top: 5px;
-  }
+    .close {
+        font-size: 35px;
+        right: 2vh;
+        top: 5px;
+    }
 }
 
 @media only screen and (max-width: 340px) {
-  .line-title {
-    margin-bottom: 10px !important;
-    font-size: 24px !important;
-  }
+    .line-title {
+        margin-bottom: 10px !important;
+        font-size: 24px !important;
+    }
 
-  p {
-    font-size: 8px !important;
-  }
-
-  h3 {
-    margin: 0 0 8px !important;
-    font-size: 14px !important;
-    line-height: 24px !important;
-  }
-
-  .item {
-    margin: 10px 12px !important;
-    width: calc(var(--width) * 1.2) !important;
-    height: calc(var(--height) * 1.2) !important;
-  }
-
-  .close {
-    font-size: 30px;
-    right: 2vh;
-    top: 5px;
-  }
+    .close {
+        font-size: 30px;
+        right: 2vh;
+        top: 5px;
+    }
 }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--primary);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--primary-hover);
+}
+
+/* Make app cards clickable and responsive */
+.app-card {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Responsive grid adjustments */
+@media (max-width: 576px) {
+    .portfolio {
+        padding: 50px 15px 30px;
+    }
+    
+    .app-title {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    
+    .app-description {
+        font-size: 11px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .app-card video {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-card video {
+        max-height: 180px;
+    }
+    
+    .app-description {
+        -webkit-line-clamp: 4;
+    }
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+        margin: 20px;
+    }
+    
+    .close-modal {
+        font-size: 30px;
+        top: 5px;
+        right: 10px;
+    }
+    
+    .modal-content video {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 98%;
+        max-height: 98%;
+        margin: 10px;
+    }
+    
+    .close-modal {
+        font-size: 25px;
+        top: 3px;
+        right: 8px;
+    }
+    
+    .modal-content video {
+        max-height: 60vh;
+    }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 576px) {
+    .container.portfolio > .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .container.portfolio > .row > [class*="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    .app-card {
+        padding: 12px;
+    }
+    
+    .close {
+        font-size: 40px;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 340px) {
+    .app-card {
+        padding: 10px;
+    }
+    
+    .app-title {
+        font-size: 14px;
+    }
+    
+    .app-description {
+        font-size: 11px;
+        -webkit-line-clamp: 2;
+    }
+    
+    .close {
+        font-size: 35px;
+        right: 10px;
+        top: 5px;
+    }
+}
+
+
+
+
