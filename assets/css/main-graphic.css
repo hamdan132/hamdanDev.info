@@ -668,7 +668,7 @@ body {
 @media (max-width: 500px) {
 
   .preview-wrapper {
-    display: none !important;
+    /* display: none !important; */
   }
 }
 
