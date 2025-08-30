@@ -11,13 +11,37 @@
     <meta name="keywords"
         content="Graphic Design, Branding, Illustration, Digital Art, Portfolio, Creative Design, UI/UX Design, Pakistan, Hamdan Ibne Muneer">
     <meta name="author" content="Hamdan ibne Muneer" />
-    
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="assets/css/main-graphic.css" />
+    <link rel="stylesheet" href="assets/css/main-graphic.css" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
 </head>
 
 <body>
-    <section class="graphic-portfolio">
+    <section class="graphic-portfolio"><div class="preview-wrapper">
+        <div>
+          <a href="https://www.fiverr.com/space_techstore?public_mode=true" class="fixed-tumblr" target="_blank"><img
+              src="assets/img/Fiverr.png" style="height: 35%" />
+            <span>Fiverr</span></a>
+        </div>
+        <div>
+          <a href="https://www.behance.net/hamdanmuneer" class="fixed-facebook" target="_blank"><i
+              class="fa fa-behance"></i> <span>Behance</span></a>
+        </div>
+
+        <div>
+          <a href="https://github.com/hamdan132" class="fixed-gplus" target="_blank">
+            <i class="fa fa-github"></i> <span>GitHub</span></a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/hamdan-muneer-8a933b23b/" class="fixed-linkedin" target="_blank"><i
+              class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/hamdan_o_y/" class="fixed-instagrem" target="_blank"><i
+              class="fa fa-instagram"></i> <span>Instagram</span></a>
+        </div>
+      </div>
         <a href="./" class="close"> <i class='bx bx-x'></i></a>
         <div class="line-title-container">
             <h2 class="line-title">Graphic Portfolio</h2>
@@ -115,12 +139,57 @@
         </div>
     </div>
 
+    <!-- Behance Side Popup Trigger -->
+    <div class="behance-trigger">
+        <button class="behance-btn" title="See more on Behance">
+            <i class='bx bx-behance'></i>
+            <span>Behance</span>
+        </button>
+    </div>
+
+    <!-- Behance Side Popup -->
+    <div id="behancePopup" class="behance-popup">
+        <div class="behance-popup-content">
+            <div class="behance-header">
+                <h3>See More on Behance</h3>
+                <span class="behance-close">&times;</span>
+            </div>
+            <div class="behance-body">
+                <p>Explore my complete graphic design portfolio on Behance with more projects and detailed case studies.</p>
+                <div class="behance-stats">
+                    <div class="stat">
+                        <i class='bx bx-heart'></i>
+                        <span>Projects</span>
+                        <strong>25+</strong>
+                    </div>
+                    <div class="stat">
+                        <i class='bx bx-show'></i>
+                        <span>Views</span>
+                        <strong>10K+</strong>
+                    </div>
+                    <div class="stat">
+                        <i class='bx bx-like'></i>
+                        <span>Appreciations</span>
+                        <strong>500+</strong>
+                    </div>
+                </div>
+                <a href="https://www.behance.net/hamdanibnemuneer" target="_blank" class="behance-link">
+                    <i class='bx bx-link-external'></i>
+                    Visit My Behance Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
             const closeModal = document.querySelector('.close-modal');
+            const behancePopup = document.getElementById('behancePopup');
+            const behanceBtn = document.querySelector('.behance-btn');
+            const behanceClose = document.querySelector('.behance-close');
 
             // Add click event to all mosaic items
             document.querySelectorAll('.mosaic-item').forEach(item => {
@@ -150,6 +219,33 @@
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && modal.style.display === 'flex') {
                     modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Behance Popup functionality
+            behanceBtn.addEventListener('click', function () {
+                behancePopup.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+
+            behanceClose.addEventListener('click', function () {
+                behancePopup.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close behance popup when clicking outside the content
+            behancePopup.addEventListener('click', function (e) {
+                if (e.target === behancePopup) {
+                    behancePopup.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close behance popup with Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && behancePopup.classList.contains('show')) {
+                    behancePopup.classList.remove('show');
                     document.body.style.overflow = 'auto';
                 }
             });

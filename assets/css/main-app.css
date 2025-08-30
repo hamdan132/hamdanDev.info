@@ -385,3 +385,87 @@ body {
 
 
 
+
+
+.preview-wrapper {
+  position: fixed;
+  top: 130px;
+  right: 4px;
+  z-index: 10;
+
+}
+
+.preview-wrapper a {
+  color: #fff;
+  display: block;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  margin-bottom: 2px;
+  z-index: 1;
+  border-radius: 3px;
+
+}
+
+.preview-wrapper a:hover>span {
+  visibility: visible;
+  right: 41px;
+  opacity: 1;
+  border-radius: 3px;
+}
+
+.preview-wrapper a span {
+  line-height: 40px;
+  right: 60px;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  visibility: hidden;
+  transition-duration: 0.5s;
+  z-index: 1;
+  opacity: 0;
+}
+
+
+.fixed-facebook,
+.fixed-facebook span {
+  background-color: var(--primary);
+}
+
+.fixed-twitter,
+.fixed-twitter span {
+  background-color: var(--primary);
+
+}
+
+.fixed-gplus,
+.fixed-gplus span {
+  background-color: var(--primary);
+
+}
+
+.fixed-linkedin,
+.fixed-linkedin span {
+  background-color: var(--primary);
+
+}
+
+.fixed-instagrem,
+.fixed-instagrem span {
+  background-color: var(--primary);
+
+}
+
+.fixed-tumblr,
+.fixed-tumblr span {
+  background-color: var(--primary);
+
+}
+@media (max-width: 500px) {
+
+  .preview-wrapper {
+    display: none !important;
+  }
+}
