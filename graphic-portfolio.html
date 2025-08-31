@@ -1477,8 +1477,8 @@
     <!-- Image Preview Modal -->
 
     <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
             <img id="modalImage" src="" alt="Preview Image">
         </div>
     </div>
@@ -1527,6 +1527,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/mosaic-layout.js"></script>
     <script>
         $(document).ready(function () {
             const modal = document.getElementById('imageModal');
@@ -1536,6 +1537,11 @@
             const behanceBtn = document.querySelector('.behance-btn');
             const behanceClose = document.querySelector('.behance-close');
 
+            // Zoom functionality variables
+            let currentScale = 1;
+            let initialDistance = 0;
+            let lastTapTime = 0;
+
             // Add click event to all mosaic items
             document.querySelectorAll('.mosaic-item').forEach(item => {
                 item.addEventListener('click', function () {
@@ -1543,8 +1549,58 @@
                     modalImage.src = imageSrc;
                     modal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
+                    // Reset zoom when opening modal
+                    currentScale = 1;
+                    modalImage.style.transform = 'scale(1)';
                 });
             });
+
+            // Double tap to zoom
+            modalImage.addEventListener('touchstart', function (e) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTapTime;
+                if (tapLength < 300 && tapLength > 0) {
+                    // Double tap detected
+                    if (currentScale === 1) {
+                        currentScale = 2;
+                    } else {
+                        currentScale = 1;
+                    }
+                    modalImage.style.transform = `scale(${currentScale})`;
+                    e.preventDefault();
+                }
+                lastTapTime = currentTime;
+            });
+
+            // Pinch to zoom
+            modalImage.addEventListener('touchstart', function (e) {
+                if (e.touches.length === 2) {
+                    initialDistance = getDistance(e.touches[0], e.touches[1]);
+                }
+            });
+
+            modalImage.addEventListener('touchmove', function (e) {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    const currentDistance = getDistance(e.touches[0], e.touches[1]);
+                    const scale = currentDistance / initialDistance;
+                    const newScale = Math.min(Math.max(scale * currentScale, 0.5), 3);
+                    modalImage.style.transform = `scale(${newScale})`;
+                }
+            });
+
+            modalImage.addEventListener('touchend', function (e) {
+                if (e.touches.length < 2) {
+                    currentScale = parseFloat(modalImage.style.transform.replace('scale(', '').replace(')', '')) || 1;
+                }
+            });
+
+            // Helper function to calculate distance between two touches
+            function getDistance(touch1, touch2) {
+                const dx = touch1.clientX - touch2.clientX;
+                const dy = touch1.clientY - touch2.clientY;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
 
             // Close modal when clicking the close button
             closeModal.addEventListener('click', function () {

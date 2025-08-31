@@ -277,7 +277,7 @@ body {
     .app-description {
         font-size: 11px;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -287,13 +287,20 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .portfolio .row > div {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+}
+
 @media (max-width: 768px) {
     .app-card video {
-        max-height: 180px;
+        max-height: 220px;
     }
-    
+
     .app-description {
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 6;
     }
 }
 
@@ -312,7 +319,7 @@ body {
     }
     
     .modal-content video {
-        max-height: 70vh;
+        max-height: 80vh;
     }
 }
 
@@ -330,7 +337,7 @@ body {
     }
     
     .modal-content video {
-        max-height: 60vh;
+        max-height: 90vh;
     }
 }
 
@@ -358,6 +365,9 @@ body {
         right: 15px;
         top: 10px;
     }
+    .portfolio {
+    padding: 10px 10px 20px;
+}
 }
 
 /* Extra small devices */
@@ -372,7 +382,7 @@ body {
     
     .app-description {
         font-size: 11px;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 6;
     }
     
     .close {

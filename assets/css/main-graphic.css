@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url("../assets/css/fonts/Montserrat-Regular.eot");
-  src: local("☺"), url("../assets/css/fonts/Montserrat-Regular.woff") format("woff"), url("../assets/css/fonts/Montserrat-Regular.ttf") format("truetype"), url("../assets/css/fonts/Montserrat-Regular.svg") format("svg");
+  src: url("./fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("./fonts/Montserrat-Regular.woff") format("woff"), url("./fonts/Montserrat-Regular.ttf") format("truetype"), url("./fonts/Montserrat-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -126,14 +126,7 @@ body {
 }
 
 
-/* Make some items larger for mosaic effect */
-.mosaic-item:nth-child(3n+1) {
-  grid-column: span 2;
-}
-
-.mosaic-item:nth-child(5n+2) {
-  grid-row: span 2;
-}
+/* Dynamic spans handled by JavaScript */
 
 /* Modal Styles */
 .modal {
@@ -166,19 +159,21 @@ body {
   max-height: 80vh;
   display: block;
   object-fit: contain;
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
 
 .close-modal {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   color: var(--primary);
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
   z-index: 1001;
   transition: color 0.3s;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(255 255 255 / 70%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -257,16 +252,12 @@ body {
 
 @media (max-width: 576px) {
   .mosaic-container {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 180px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
     grid-gap: 12px;
   }
 
-  .mosaic-item:nth-child(3n+1),
-  .mosaic-item:nth-child(5n+2) {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
+  /* Dynamic spans handled by JavaScript */
 
   .line-title {
     width: 250px;
@@ -620,16 +611,18 @@ body {
 @media (max-width: 768px) {
   .behance-popup {
     width: 320px;
-    right: -320px;
+    left: -320px;
   }
-  
+  .behance-trigger {
+    top: 20%;
+}
   .behance-btn {
-    padding: 12px 15px;
-    font-size: 14px;
+    padding: 7px;
+    font-weight: 400;
   }
   
   .behance-btn span {
-    display: none;
+    font-size: 11px;
   }
   
   .behance-stats {
@@ -643,14 +636,14 @@ body {
   
   .behance-link {
     padding: 12px 20px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .behance-popup {
     width: 280px;
-    right: -280px;
+    left: -280px;
   }
   
   .behance-header {
@@ -658,11 +651,11 @@ body {
   }
   
   .behance-header h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .behance-body p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 600px) {
