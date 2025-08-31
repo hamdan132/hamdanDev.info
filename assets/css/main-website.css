@@ -351,6 +351,17 @@ ul:hover {
   background-color: var(--primary);
 
 }
+.fixed-whatsapp,
+.fixed-whatsapp span {
+  background-color: var(--primary);
+
+}
+
+.fixed-upwork,
+.fixed-upwork span {
+  background-color: var(--primary);
+
+}
 
 .fixed-tumblr,
 .fixed-tumblr span {

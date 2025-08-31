@@ -816,6 +816,8 @@ body {
 }
 
 .intro--banner img {
+   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
   position: absolute;
   bottom: 21px;
   right: -12px
@@ -2081,6 +2083,17 @@ body {
 
 .fixed-instagrem,
 .fixed-instagrem span {
+  background-color: var(--primary);
+
+}
+.fixed-whatsapp,
+.fixed-whatsapp span {
+  background-color: var(--primary);
+
+}
+
+.fixed-upwork,
+.fixed-upwork span {
   background-color: var(--primary);
 
 }
