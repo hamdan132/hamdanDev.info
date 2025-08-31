@@ -233,3 +233,95 @@ document.querySelector('.alert-close').addEventListener('click', () => {
 
 
 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const skillTooltip = document.getElementById("skill-tooltip");
+  if (!skillTooltip) {
+    console.error("Tooltip element with id 'skill-tooltip' not found.");
+    return;
+  }
+  const tooltipSkillName = document.getElementById("tooltip-skill-name");
+  const tooltipDescription = document.getElementById("tooltip-description");
+  const tooltipExperience = document.getElementById("tooltip-experience");
+
+  // Function to calculate years of experience based on data-start and data-end attributes
+  function calculateYears(skillDiv) {
+    const startYear = parseInt(skillDiv.getAttribute("data-start"));
+    let endYear = skillDiv.getAttribute("data-end");
+    if (endYear === "Continued" || endYear === "continued" || !endYear) {
+      endYear = new Date().getFullYear();
+    } else {
+      endYear = parseInt(endYear);
+    }
+    if (!startYear || !endYear || isNaN(startYear) || isNaN(endYear)) {
+      return 0;
+    }
+    return endYear - startYear;
+  }
+
+  function showTooltip(event) {
+    const skillDiv = event.currentTarget;
+    const description = skillDiv.getAttribute("data-description");
+    const skillName = skillDiv.querySelector(".skill-name").textContent;
+
+    const years = calculateYears(skillDiv);
+
+    tooltipSkillName.textContent = skillName;
+    tooltipDescription.textContent = description;
+    tooltipExperience.textContent = years > 0 ? years + " year" + (years > 1 ? "s" : "") : "N/A";
+
+    // Get the index of the current skill
+    const skillIndex = Array.from(skillElements).indexOf(skillDiv);
+    const isLastFive = skillIndex >= skillElements.length - 5;
+
+    // Position tooltip upwards for last five skills
+    if (isLastFive) {
+      skillTooltip.style.top = event.pageY - 180 + "px"; // Adjust upwards
+    } else {
+      skillTooltip.style.top = event.pageY + 15 + "px";
+    }
+    skillTooltip.style.left = event.pageX + 15 + "px";
+    skillTooltip.classList.add("show");
+  }
+
+  function moveTooltip(event) {
+    const skillDiv = event.currentTarget;
+    const skillIndex = Array.from(skillElements).indexOf(skillDiv);
+    const isLastFive = skillIndex >= skillElements.length - 5;
+
+    // Position tooltip upwards for last five skills
+    if (isLastFive) {
+      skillTooltip.style.top = event.pageY - 180 + "px"; // Adjust upwards
+    } else {
+      skillTooltip.style.top = event.pageY + 15 + "px";
+    }
+    skillTooltip.style.left = event.pageX + 15 + "px";
+  }
+
+  function hideTooltip() {
+    skillTooltip.classList.remove("show");
+  }
+
+  const skillElements = document.querySelectorAll(".skill");
+  if (!skillElements.length) {
+    console.error("No elements with class 'skill' found.");
+    return;
+  }
+  skillElements.forEach((skill) => {
+    skill.addEventListener("mouseenter", showTooltip);
+    skill.addEventListener("mousemove", moveTooltip);
+    skill.addEventListener("mouseleave", hideTooltip);
+
+    // Add click event to open experience modal
+    skill.addEventListener("click", () => {
+      const experienceModal = document.getElementById("model-container-2");
+      if (experienceModal) {
+        experienceModal.classList.add("show-model");
+      }
+    });
+  });
+});

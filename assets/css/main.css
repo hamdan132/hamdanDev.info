@@ -944,7 +944,7 @@ body {
   }
 
   .intro--options {
-    display: none
+    padding: 30px;
   }
 }
 
@@ -1285,7 +1285,7 @@ body {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   list-style: none
@@ -1304,6 +1304,7 @@ body {
 }
 
 .about--options>a:nth-child(1) {
+  
   background-image: url("../img/history.jpg")
 }
 
@@ -1430,7 +1431,7 @@ body {
   }
 
   .model__content {
-    padding: 2rem 2rem 8rem !important;
+    padding: 2rem 2rem 6rem !important;
   }
 }
 
@@ -2614,4 +2615,44 @@ body {
     scroll-padding-top: 20px;
     /* Adjust as needed */
   }
+}
+
+/* Skill Tooltip Styles */
+.skill-tooltip {
+  position: absolute;
+  background-color: var(--secondary);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.skill-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-content h4 {
+  margin: 0 0 10px 0;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tooltip-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.tooltip-content p strong {
+  color: var(--primary);
 }
