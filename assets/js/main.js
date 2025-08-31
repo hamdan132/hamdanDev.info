@@ -311,17 +311,23 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("No elements with class 'skill' found.");
     return;
   }
+  const isMobile = window.innerWidth < 768;
   skillElements.forEach((skill) => {
-    skill.addEventListener("mouseenter", showTooltip);
-    skill.addEventListener("mousemove", moveTooltip);
-    skill.addEventListener("mouseleave", hideTooltip);
-
-    // Add click event to open experience modal
-    skill.addEventListener("click", () => {
-      const experienceModal = document.getElementById("model-container-2");
-      if (experienceModal) {
-        experienceModal.classList.add("show-model");
-      }
-    });
+    if (!isMobile) {
+      skill.addEventListener("mouseenter", showTooltip);
+      skill.addEventListener("mousemove", moveTooltip);
+      skill.addEventListener("mouseleave", hideTooltip);
+      skill.addEventListener("click", () => {
+        const experienceModal = document.getElementById("model-container-2");
+       
+      });
+    } else {
+      skill.addEventListener("click", (event) => {
+        showTooltip(event);
+        setTimeout(() => {
+          hideTooltip();
+        }, 3000);
+      });
+    }
   });
 });
