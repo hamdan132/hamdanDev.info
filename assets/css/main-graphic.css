@@ -638,7 +638,7 @@ body {
   }
   
   .behance-body {
-    padding: 20px;
+    padding: 10px 20px;
   }
   
   .behance-link {
@@ -665,12 +665,18 @@ body {
     font-size: 14px;
   }
 }
-@media (max-width: 500px) {
-
-  .preview-wrapper {
-    /* display: none !important; */
-  }
+@media (max-width: 600px) {
+.line-title {
+        padding-bottom: -10px  !important;
+        width: 250px !important;
+        margin-bottom: 20px !important;
+        font-size: 25px !important;
+    }
+    .line-title-container {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    }
+  
 }
-
 
 
