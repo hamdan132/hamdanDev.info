@@ -38,6 +38,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
 
+    <style>
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--light-text);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            z-index: 30;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(253, 85, 85, 0.3);
+            font-size: 24px;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(253, 85, 85, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -1684,7 +1720,11 @@
         </div>
     </div>
 
-    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top"><i
+            class='bx bx-chevron-up'></i></button>
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/mosaic-layout.js"></script>
@@ -1820,6 +1860,24 @@
                         document.body.style.overflow = 'auto';
                     }
                 }
+            });
+
+            // Scroll to Top functionality
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // Show/hide button based on scroll position
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $(scrollToTopBtn).fadeIn();
+                } else {
+                    $(scrollToTopBtn).fadeOut();
+                }
+            });
+
+            // Scroll to top when button is clicked
+            $(scrollToTopBtn).click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
             });
         });
     </script>

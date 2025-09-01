@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showTooltip(event);
         setTimeout(() => {
           hideTooltip();
-        }, 3000);
+        }, 5000);
       });
     }
   });
