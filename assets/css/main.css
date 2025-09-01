@@ -1064,7 +1064,7 @@ body {
 
 .work--lockup .slider--item-center .slider--item-title {
   margin-top: 25px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .work--lockup .slider--item-center .slider--item-description {
@@ -1145,6 +1145,14 @@ body {
     height: 190px
   }
 
+.work--lockup .slider--item-center .slider--item-title {
+ 
+  font-size: 14px;
+}
+
+.work--lockup .slider--item-center .slider--item-description {
+   font-size: 12px;
+}
   .work--lockup .slider--next,
   .work--lockup .slider--prev {
     top: 105px
@@ -1158,7 +1166,7 @@ body {
 
   .work--lockup .slider--item-left,
   .work--lockup .slider--item-right {
-    display: none
+    transform: translateY(-150%);
   }
 }
 
