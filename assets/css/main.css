@@ -817,7 +817,7 @@ body {
 
 .intro--banner img {
    -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%) brightness(1.1);
+  filter: grayscale(100%);
 
   position: absolute;
   bottom: 21px;
