@@ -1,13 +1,26 @@
 
 
-// perloader
+// preloader — hide after critical hero content, not all page assets
 
-
-$(window).on("load", function () {
+function hidePreloader() {
   $(".preloader").addClass("active");
   setTimeout(function () {
     $(".preloader").addClass("done");
-  }, 1500);
+  }, 600);
+}
+
+$(document).ready(function () {
+  var heroImg = document.querySelector(
+    '.section--is-active img[src*="introduction-visual"]'
+  );
+
+  if (heroImg && !heroImg.complete) {
+    heroImg.addEventListener("load", hidePreloader, { once: true });
+    heroImg.addEventListener("error", hidePreloader, { once: true });
+    setTimeout(hidePreloader, 2000);
+  } else {
+    hidePreloader();
+  }
 });
 
 
@@ -25,9 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
     loopCount: Infinity,
   });
 
-  document.querySelector(".loop").addEventListener("click", function () {
-    toggleLoop(typed);
-  });
+  document.querySelector(".loop") &&
+    document.querySelector(".loop").addEventListener("click", function () {
+      toggleLoop(typed);
+    });
 });
 
 
@@ -168,13 +182,15 @@ function sendMail() {
   const serviceID = "service_v3vncii";
   const templateID = "template_pvx1d6l";
 
-  emailjs.send(serviceID, templateID, gmails)
-    .then((res) => {
+  window.initEmailJS()
+    .then(function () {
+      return emailjs.send(serviceID, templateID, gmails);
+    })
+    .then(function (res) {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("message").value = "";
 
-      // Uncheck options
       var checkboxes = document.getElementsByTagName("input");
       for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].type === "checkbox") {
@@ -185,7 +201,7 @@ function sendMail() {
       console.log(res);
       showAlert("Your Message send successfully.", "success");
     })
-    .catch((err) => {
+    .catch(function (err) {
       console.log(err);
       showAlert("Error sending message. Please try again later.", "error");
     });

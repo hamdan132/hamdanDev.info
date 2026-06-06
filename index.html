@@ -31,11 +31,15 @@
     content="Discover the professional portfolio of Hamdan Ibne Muneer, a leading full stack developer and graphic designer from Pakistan. Specializing in web development, mobile apps, UI/UX design, and innovative branding solutions." />
   <meta property="twitter:image" content="https://hamdandev.space/assets/img/logo.png" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  </noscript>
 
 
   <!-- JSON-LD Structured Data -->
@@ -83,13 +87,9 @@
   }
   </script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("areCz8LCU42MrSRX8");
-    })();
-  </script>
+  <link rel="preload" as="image" href="assets/img/introduction-visual.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/img/logo.png" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
 </head>
 
 <body oncontextmenu="return false">
@@ -115,7 +115,7 @@
         <div class="l-wrapper">
           <header class="header">
             <a class="header--logo" href="#0">
-              <img src="assets/img/logo.png" alt="space tech" class="header-img-logo" />
+              <img src="assets/img/logo.png" alt="space tech" class="header-img-logo" fetchpriority="high" />
               <p>Space Tech</p>
 
             </a>
@@ -171,7 +171,7 @@
                     </svg>
                     <span class="btn-background"></span>
                   </button>
-                  <img src="assets/img/introduction-visual.png" alt="Welcome" />
+                  <img src="assets/img/introduction-visual.png" alt="Welcome" fetchpriority="high" />
                 </div>
                 <div class="intro--options">
                   <!-- <h3>Hamdan Ibne Muneer</h3> -->
@@ -194,7 +194,7 @@
                     <li class="slider--item slider--item-left">
                       <a href="graphic-portfolio.html">
                         <div class="slider--item-image">
-                          <img src="assets/img/graphic.jpg" alt="Graphic" />
+                          <img data-src="assets/img/graphic.jpg" alt="Graphic" width="400" height="300" />
                         </div>
                         <p class="slider--item-title">Graphic</p>
                         <p class="slider--item-description">
@@ -205,7 +205,7 @@
                     <li class="slider--item slider--item-center">
                       <a href="Website-portfolio.html">
                         <div class="slider--item-image">
-                          <img src="assets/img/website.jpg" alt="Website" />
+                          <img data-src="assets/img/website.jpg" alt="Website" width="400" height="300" />
                         </div>
                         <p class="slider--item-title">Websites</p>
                         <p class="slider--item-description">
@@ -217,7 +217,7 @@
                     <li class="slider--item slider--item-right">
                       <a href="App-portfolio.html">
                         <div class="slider--item-image">
-                          <img src="assets/img/app.jpg" alt="App" />
+                          <img data-src="assets/img/app.jpg" alt="App" width="400" height="300" />
                         </div>
                         <p class="slider--item-title">Apps</p>
                         <p class="slider--item-description">
@@ -269,16 +269,16 @@
                       </svg>
                     </span>
                   </a>
-                  <img src="assets/img/about-visual.png" alt="About Us" />
+                  <img data-src="assets/img/about-visual.png" alt="About Us" width="500" height="400" />
                 </div>
                 <div class="about--options">
-                  <a id="open-model1">
+                  <a id="open-model1" data-bg="assets/img/history.jpg">
                     <h3>History</h3>
                   </a>
-                  <a id="open-model2">
+                  <a id="open-model2" data-bg="assets/img/experience.jpg">
                     <h3>Experience</h3>
                   </a>
-                  <a id="open-model3">
+                  <a id="open-model3" data-bg="assets/img/goals.jpg">
                     <h3>Goals</h3>
                   </a>
                 </div>
@@ -476,7 +476,7 @@
             <!-- Contact -->
 
             <li class="l-section section">
-              <div class="contact">
+              <div class="contact" data-bg="assets/img/contact-visual.png">
                 <div class="contact--lockup">
                   <div class="modal">
                     <div class="modal--information">
@@ -622,7 +622,7 @@
       <div class="preview-wrapper">
         <div>
           <a href="https://www.fiverr.com/space_techstore?public_mode=true" class="fixed-fiverr" target="_blank"><img
-              src="assets/img/Fiverr.png" alt="fiverr profile" style="height: 35%" />
+              data-src="assets/img/Fiverr.png" alt="fiverr profile" style="height: 35%" loading="lazy" />
             <span>Fiverr</span></a>
         </div>
         <div>
@@ -631,7 +631,7 @@
         </div>
         <div>
           <a href="https://www.upwork.com/freelancers/~01e19e059fc3a8c870?mp_source=share" class="fixed-upwork"
-            target="_blank"><img src="assets/img/upwork.png" alt="upwork profile" style="height: 30%" />
+            target="_blank"><img data-src="assets/img/upwork.png" alt="upwork profile" style="height: 30%" loading="lazy" />
             <span>Upwork</span></a>
         </div>
         <div>
@@ -854,12 +854,10 @@
     <!-- goals popup end-->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/functions-min.js"></script>
-    <script src="assets/js/functions.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/functions-min.js" defer></script>
+    <script src="assets/js/lazy-load.js" defer></script>
     <script>
       const currentUrl = window.location.href;
       const baseUrl = "https://hamdandev.space/";
@@ -867,17 +865,10 @@
       if (currentUrl.endsWith("/index.html") || currentUrl.endsWith("/index.html#")) {
         window.location.replace(baseUrl);
       }
-      window.jQuery ||
-        document.write(
-          '<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>'
-        );
     </script>
-    <script src="assets/js/main.js">
-    </script>
-
-    <script src="assets/js/typed/typed.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="assets/js/disableInspection.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/typed/typed.umd.js" defer></script>
+    <script src="assets/js/disableInspection.js" defer></script>
 </body>
 
 </html>
