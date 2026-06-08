@@ -1,2 +1,9 @@
 RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect index.html to homepage
 RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ https://hamdandev.site/ [R=301,L]
