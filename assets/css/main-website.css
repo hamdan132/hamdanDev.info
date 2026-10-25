@@ -11,13 +11,21 @@
 }
 
 :root {
-  --primary: #fd5555;
-  --primary-hover: #ff1b1b;
-  --secondary: #050c16;
+  --primary: #087BFF;
+  --primary-hover: #168BFF;
+  --secondary: #06111F;
+  --background: #06111F;
+  --surface: #0B1D33;
+  --surface-hover: #102944;
+  --accent: #00C8FF;
+  --border: #193651;
+  --text-primary: #EAF4FF;
+  --text-secondary: #9CB3CC;
+  --glow: rgba(0, 200, 255, 0.25);
 }
 
 body {
-  background-color: black;
+  background-color: var(--secondary);
 }
 
 .line-title {
@@ -58,7 +66,7 @@ body {
   list-style-type: none;
   padding: 8px 20px;
   margin: 15px 9px 0 0;
-  background: #ffffffcf;
+  background: rgba(11, 29, 51, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--primary);
@@ -69,7 +77,8 @@ body {
 }
 
 li a {
-  color: #000;
+
+    color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -111,7 +120,7 @@ ul:hover {
 
 .line-title::before {
   width: 100%;
-  background: #f2f2f2;
+  background: #0B1D33;
 }
 
 .line-title::after {
@@ -290,7 +299,7 @@ ul:hover {
 }
 
 .preview-wrapper a {
-  color: #fff;
+  color: var(--text-primary);
   display: block;
   height: 40px;
   position: relative;

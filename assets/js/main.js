@@ -225,10 +225,10 @@ function showAlert(message, type) {
   document.getElementById("alert-message").innerText = message
   if (type === "error") {
     alertElement.style.backgroundColor = "#353635"
-    bgElement.style.backgroundColor = "#000000d6"
+    bgElement.style.backgroundColor = "#06111Fd6"
   } else {
-    alertElement.style.backgroundColor = "#fd5555"
-    bgElement.style.backgroundColor = "#000000d6"
+    alertElement.style.backgroundColor = "#087BFF"
+    bgElement.style.backgroundColor = "#06111Fd6"
   }
 
   // Hide the alert and background after a few seconds

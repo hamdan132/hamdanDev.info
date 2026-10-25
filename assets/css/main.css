@@ -35,13 +35,20 @@
 }
 
 :root {
-  --black: #000;
-  --white: #fff;
-  --primary: #fd5555;
-  --primary-hover: #ff1b1b;
-  --secondary: #050c16;
-  --secondary-bg: #050c169b;
-
+  --primary: #087BFF;
+  --primary-hover: #168BFF;
+  --secondary: #06111F;
+  --background: #06111F;
+  --surface: #0B1D33;
+  --surface-hover: #102944;
+  --accent: #00C8FF;
+  --border: #193651;
+  --text-primary: #EAF4FF;
+  --text-secondary: #9CB3CC;
+  --glow: rgba(0, 200, 255, 0.25);
+  --secondary-bg: rgba(6, 17, 31, 0.6);
+  --black: #06111F;
+  --white: #EAF4FF;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -119,7 +126,7 @@ h1 {
 
 mark {
   background: #ff0;
-  color: #000
+  color: #06111F
 }
 
 small {
@@ -292,11 +299,11 @@ body {
 }
 
 body {
-  background-color: #000;
+  background-color: #06111F;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%
 }
@@ -341,7 +348,7 @@ body {
   width: 2px;
   height: 70%;
   max-height: 750px;
-  background-color: #555;
+  background-color: #193651;
   opacity: .35;
   z-index: 10
 }
@@ -406,7 +413,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   POSITION: relative;
   LEFT: -20PX;
 }
@@ -526,7 +533,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   position: relative;
   top: 15px;
 }
@@ -568,7 +575,7 @@ body {
   position: relative;
   width: 16px;
   height: 2px;
-  background-color: #fff
+  background-color: var(--text-primary)
 }
 
 .header--nav-toggle::before {
@@ -590,7 +597,7 @@ body {
   padding: 0 20px;
   line-height: 30px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--primary);
@@ -645,7 +652,7 @@ body {
 .side-nav>li {
   position: relative;
   top: -5px;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 6px;
   cursor: pointer
 }
@@ -654,7 +661,7 @@ body {
   position: relative;
   top: 3px;
   left: 10px;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 14px;
   font-weight: 300;
   opacity: 0;
@@ -665,7 +672,7 @@ body {
   position: absolute;
   top: 3px;
   left: 10px;
-  color: #555;
+  color: #193651;
   font-size: 14px;
   font-weight: 300
 }
@@ -709,7 +716,7 @@ body {
 
 .side-nav li.is-active::before {
   left: -33px;
-  color: #fff
+  color: var(--text-primary)
 }
 
 .intro {
@@ -752,7 +759,7 @@ body {
   left: -15px;
   right: 0;
   height: 2px;
-  background-color: #282828
+  background-color: #193651
 }
 
 .intro--banner::after {
@@ -820,8 +827,8 @@ body {
 }
 
 .intro--banner img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: brightness(105%);
+  filter: brightness(105%);
 
   position: absolute;
   bottom: 21px;
@@ -850,7 +857,7 @@ body {
 }
 
 .intro--options p:hover {
-  color: #fff;
+  color: var(--text-primary);
 
   text-shadow: 0px 0px 5px #ffffff7d;
 }
@@ -1064,7 +1071,7 @@ body {
 }
 
 .work--lockup .slider--item-center a {
-  color: #fff
+  color: var(--text-primary)
 }
 
 .work--lockup .slider--item-center .slider--item-title {
@@ -1099,7 +1106,7 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #282828;
+  background-color: #193651;
   border-radius: 50%;
   cursor: pointer
 }
@@ -1265,7 +1272,7 @@ body {
 .about--banner a {
   padding: 5px 17px 5px 0;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 700;
   text-transform: uppercase;
   background-color: transparent
@@ -1310,7 +1317,7 @@ body {
   width: 150px;
   height: 75px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   border: 10px solid var(--primary);
   background-position: center;
   background-size: cover;
@@ -1502,7 +1509,7 @@ body {
   display: block;
   margin: 14px 0;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 700
 }
 
@@ -1540,7 +1547,7 @@ body {
   width: 100%;
   padding: 8px 0;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 700
 }
 
@@ -1592,7 +1599,7 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #fff
+  color: var(--text-primary)
 }
 
 .Submit {
@@ -1733,7 +1740,7 @@ body {
 .work-request--information input[type="email"] {
   width: 100%;
   padding: 0 0 5px 0;
-  background-color: var(--black);
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
   border-radius: 0;
@@ -1846,6 +1853,7 @@ body {
   transform: translateZ(0) translateX(0) rotateY(0deg);
   min-height: 100%;
   outline: 30px solid var(--primary);
+  overflow: hidden;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
@@ -1874,6 +1882,10 @@ body {
   -webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
   transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
   outline: 30px solid var(--primary)
+}
+
+.perspective.effect-rotate-left.perspective--modalview.effect-rotate-left--animate {
+  background: #06111F;
 }
 
 .outer-nav {
@@ -2058,7 +2070,7 @@ body {
 }
 
 .preview-wrapper a {
-  color: #fff;
+  color: var(--text-primary);
   display: block;
   height: 40px;
   position: relative;
@@ -2208,6 +2220,7 @@ body {
 
 .preloader.active.done {
   z-index: -1;
+  background: #070a0e;
 }
 
 .preloader.active .loading-mask {
@@ -2326,7 +2339,7 @@ body {
 }
 
 .skill>div {
-  color: #fff;
+  color: var(--text-primary);
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
@@ -2437,7 +2450,7 @@ body {
 .model__button {
   display: inline-block;
   background-color: var(--secondary-bg);
-  color: #FFF;
+  color: var(--text-primary);
   padding: 1rem 1.25rem;
   border-radius: .5rem;
   transition: .3s;
@@ -2596,7 +2609,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1rem;
   flex-direction: column;
 }
@@ -2615,7 +2628,7 @@ body {
   right: 15px;
   cursor: pointer;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 
@@ -2664,7 +2677,7 @@ body {
   margin: 5px 0;
   font-size: 14px;
   line-height: 1.4;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .tooltip-content p strong {

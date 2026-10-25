@@ -1,7 +1,15 @@
 :root {
-    --primary: #fd5555;
-    --primary-hover: #ff1b1b;
-    --secondary: #000000;
+  --primary: #087BFF;
+  --primary-hover: #168BFF;
+  --secondary: #06111F;
+  --background: #06111F;
+  --surface: #0B1D33;
+  --surface-hover: #102944;
+  --accent: #00C8FF;
+  --border: #193651;
+  --text-primary: #EAF4FF;
+  --text-secondary: #9CB3CC;
+  --glow: rgba(0, 200, 255, 0.25);
 }
 
 body {
@@ -31,12 +39,14 @@ body {
 
 .portfolio {
     padding: 70px 20px 50px;
+    z-index: 30;
+    position: relative;
 }
 
 .app-card {
-    background: black;
+    background: var(--surface);
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px var(--glow);
     padding: 15px;
     text-align: center;
     transition: transform 0.3s;
@@ -62,7 +72,7 @@ body {
 
 .app-description {
     font-size: 12px;
-    color: #bdbdbd;
+    color: #9CB3CC;
 }
 
 .line-title-container {
@@ -110,7 +120,7 @@ body {
 
 .line-title::before {
     width: 100%;
-    background: #f2f2f2;
+    background: #0B1D33;
 }
 
 .line-title::after {
@@ -224,7 +234,7 @@ body {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-    background: #000;
+    background: #06111F;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -406,7 +416,7 @@ body {
 }
 
 .preview-wrapper a {
-  color: #fff;
+  color: var(--text-primary);
   display: block;
   height: 40px;
   position: relative;

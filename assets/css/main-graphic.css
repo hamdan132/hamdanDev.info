@@ -12,12 +12,20 @@
 }
 
 :root {
-  --primary: #fd5555;
-  --primary-hover: #ff1b1b;
-  --secondary: #050c16;
-  --dark-bg: #000000;
-  --light-text: #ffffff;
-  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --primary: #087BFF;
+  --primary-hover: #168BFF;
+  --secondary: #06111F;
+  --dark-bg: #06111F;
+  --light-text: #EAF4FF;
+  --overlay-bg: rgba(6, 17, 31, 0.8);
+  --background: #06111F;
+  --surface: #0B1D33;
+  --surface-hover: #102944;
+  --accent: #00C8FF;
+  --border: #193651;
+  --text-primary: #EAF4FF;
+  --text-secondary: #9CB3CC;
+  --glow: rgba(0, 200, 255, 0.25);
 }
 
 body {
@@ -70,7 +78,7 @@ body {
 
 .line-title::before {
   width: 100%;
-  background: #f2f2f2;
+  background: #0B1D33;
 }
 
 .line-title::after {
@@ -106,12 +114,12 @@ body {
   border-radius: 15px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #1a1a1a;
+  background: #0B1D33;
 }
 
 .mosaic-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(253, 85, 85, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 200, 255, 0.25);
 }
 
 .mosaic-item img {
@@ -147,7 +155,7 @@ body {
   position: relative;
   max-width: 90%;
   max-height: 90%;
-  background: #000;
+  background: #06111F;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
@@ -298,7 +306,7 @@ body {
 }
 
 .preview-wrapper a {
-  color: #fff;
+  color: var(--text-primary);
   display: block;
   height: 40px;
   position: relative;
@@ -424,7 +432,7 @@ body {
 
 /* Loading state for images */
 .mosaic-item {
-  background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  background: linear-gradient(90deg, #0B1D33 0%, #102944 50%, #0B1D33 100%);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
 }
@@ -480,7 +488,7 @@ body {
   gap: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 2px 0 15px rgba(253, 85, 85, 0.3);
+  box-shadow: 2px 0 15px rgba(0, 200, 255, 0.25);
 }
 
 .behance-btn:hover {
@@ -615,7 +623,7 @@ body {
 .behance-link:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(253, 85, 85, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 200, 255, 0.35);
 }
 
 /* Responsive Design for Behance Popup */

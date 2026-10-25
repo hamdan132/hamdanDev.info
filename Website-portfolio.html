@@ -13,8 +13,10 @@
 
     <meta name="author" content="Hamdan Ibne Muneer" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#fd5555" />
+    <meta name="theme-color" content="#087BFF" />
     <link rel="canonical" href="https://hamdandev.site/Website-portfolio.html" />
+
+    <link rel="stylesheet" href="assets/css/stars.css" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -60,7 +62,7 @@
         "sameAs": [
           "https://www.behance.net/hamdanmuneer",
           "https://github.com/hamdan132",
-          "https://www.linkedin.com/in/hamdan-muneer-8a933b23b/",
+          "https://www.linkedin.com/in/hamdan-muneer/",
           "https://www.instagram.com/hamdan_o_y/"
         ]
       },
@@ -151,14 +153,14 @@
             cursor: pointer;
             z-index: 30;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(253, 85, 85, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 200, 255, 0.25);
             font-size: 24px;
         }
 
         .scroll-to-top:hover {
             background: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(253, 85, 85, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 200, 255, 0.35);
         }
 
         @media (max-width: 768px) {
@@ -177,6 +179,11 @@
 <body oncontextmenu="return false">
 
 
+    <div id="starfield" aria-hidden="true">
+      <div class="star-layer star-layer--far"></div>
+      <div class="star-layer star-layer--mid"></div>
+      <div class="star-layer star-layer--near"></div>
+    </div>
 
     <a href="./" class="close">
         <i class='bx bx-x'></i>
@@ -212,7 +219,7 @@
                     <i class="fa fa-github"></i> <span>GitHub</span></a>
             </div>
             <div>
-                <a href="https://www.linkedin.com/in/hamdan-muneer-8a933b23b/" class="fixed-linkedin" target="_blank"><i
+                <a href="https://www.linkedin.com/in/hamdan-muneer/" class="fixed-linkedin" target="_blank"><i
                         class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
             </div>
             <div>
@@ -958,7 +965,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>// Scroll to Top functionality
+    <script>
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
         // Show/hide button based on scroll position
@@ -975,8 +982,9 @@
             $('html, body').animate({ scrollTop: 0 }, 800);
             return false;
         });
-
-    </script>    <script src="assets/js/disableInspection.js"></script>
+</script>
+    <script src="assets/js/disableInspection.js"></script>
+    <script src="assets/js/stars.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,88 @@
+/* Starfield background layer — galaxy / deep space */
+#starfield {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, #06111F 0%, #02040a 70%);
+  perspective: 600px;
+}
+
+.star-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.star-layer--far  { transform: translateZ(-300px) scale(2);   }
+.star-layer--mid  { transform: translateZ(-150px) scale(1.5); }
+.star-layer--near { transform: translateZ(0);                 }
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  will-change: transform, opacity;
+  animation-name: drift, twinkle;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: var(--drift-duration), var(--twinkle-duration);
+  animation-delay: var(--drift-delay), var(--twinkle-delay);
+}
+
+.star--far {
+  width: var(--star-size);
+  height: var(--star-size);
+  opacity: var(--star-base-opacity);
+  filter: blur(0.5px);
+  animation-name: drift-far, twinkle;
+}
+
+.star--mid {
+  width: var(--star-size);
+  height: var(--star-size);
+  opacity: var(--star-base-opacity);
+  filter: blur(0.2px);
+  animation-name: drift-mid, twinkle;
+}
+
+.star--near {
+  width: var(--star-size);
+  height: var(--star-size);
+  opacity: var(--star-base-opacity);
+  filter: blur(0);
+  box-shadow: 0 0 3px rgba(0, 200, 255, 0.3), 0 0 8px rgba(0, 200, 255, 0.12);
+  animation-name: drift-near, twinkle;
+}
+
+.star--accent {
+  box-shadow: 0 0 5px rgba(0, 200, 255, 0.65), 0 0 12px rgba(0, 200, 255, 0.25);
+}
+
+/* Random-direction drift */
+@keyframes drift-far {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(var(--dx-far), var(--dy-far), 0); }
+}
+
+@keyframes drift-mid {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(var(--dx-mid), var(--dy-mid), 0); }
+}
+
+@keyframes drift-near {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(var(--dx-near), var(--dy-near), 0); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: var(--star-base-opacity); }
+  50%      { opacity: calc(var(--star-base-opacity) * 1.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none;
+  }
+}
