@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hamdan Ibne Muneer | Flutter & Web Developer | Graphic Designer Pakistan | Space Tech</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="A Full stack designer and developer from Pakistan, focusing on interactive design, typography, responsive design & user-friendly interfaces. Building clean, modern web and mobile applications with strong emphasis on user experience, performance, and accessible design. Founder of Space Tech." />
+  <meta name="keywords"
+    content="Hamdan Ibne Muneer, Space Tech, Flutter developer Pakistan, web developer Pakistan, graphic designer Pakistan, mobile app developer Gujrat, freelance Flutter developer, UI UX designer Pakistan, logo design Pakistan, responsive web design, Dart Flutter apps, portfolio Pakistan, TailwindCSS, Vue.js, Django, Flask, Supabase, SQLite, MongoDB, PostgreSQL, Docker, TensorFlow, WebGL, Ionic, C#, C++, Java, Kotlin, Remote developer Pakistan" />
+  <meta name="author" content="Hamdan Ibne Muneer" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="geo.region" content="PK-PB" />
+  <meta name="geo.placename" content="Gujrat, Pakistan" />
+  <meta name="language" content="English" />
+  <meta name="theme-color" content="#087BFF" />
+  <link rel="canonical" href="https://hamdandev.site/" />
+
+  <!-- Open Graph / Social Share Preview (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Space Tech — Hamdan Ibne Muneer" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://hamdandev.site/" />
+  <meta property="og:title" content="Hamdan Ibne Muneer | Flutter, Web &amp; Graphic Design | Space Tech" />
+  <meta property="og:description"
+    content="A Full stack designer and developer from Pakistan, focusing on interactive design, typography, responsive design & user-friendly interfaces. Building clean, modern web and mobile applications with strong emphasis on user experience, performance, and accessible design. Founder of Space Tech." />
+  <meta property="og:image" content="https://hamdandev.site/assets/img/og-share.jpg" />
+  <meta property="og:image:secure_url" content="https://hamdandev.site/assets/img/og-share.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"
+    content="Hamdan Ibne Muneer — Flutter app developer, web developer and graphic designer at Space Tech, Pakistan" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://hamdandev.site/" />
+  <meta name="twitter:title" content="Hamdan Ibne Muneer | Flutter, Web &amp; Graphic Design | Space Tech" />
+  <meta name="twitter:description"
+    content="A Full stack designer and developer from Pakistan, focusing on interactive design, typography, responsive design & user-friendly interfaces. Building clean, modern web and mobile applications with strong emphasis on user experience, performance, and accessible design. Founder of Space Tech." />
+  <meta name="twitter:image" content="https://hamdandev.site/assets/img/og-share.jpg" />
+  <meta name="twitter:image:alt"
+    content="Hamdan Ibne Muneer — Flutter developer, web developer and graphic designer at Space Tech" />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/skills-grid.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/themefisher-fonts.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  </noscript>
+
+
+  <link rel="stylesheet" href="assets/css/stars.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hamdandev.site/#website",
+        "name": "Space Tech",
+        "alternateName": "Hamdan Ibne Muneer Portfolio",
+        "url": "https://hamdandev.site/",
+        "description": "Official portfolio of Space Tech — Flutter app development, web development & graphic design services in Pakistan by Hamdan Ibne Muneer.",
+        "publisher": { "@id": "https://hamdandev.site/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://hamdandev.site/#organization",
+        "name": "Space Tech",
+        "url": "https://hamdandev.site/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hamdandev.site/assets/img/logo.png"
+        },
+        "founder": { "@id": "https://hamdandev.site/#person" },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        "sameAs": [
+          "https://www.behance.net/hamdanmuneer",
+          "https://github.com/hamdan132",
+          "https://www.linkedin.com/in/hamdan-muneer/",
+          "https://www.instagram.com/hamdan_o_y/",
+          "https://www.fiverr.com/space_techstore"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hamdandev.site/#person",
+        "name": "Hamdan Ibne Muneer",
+        "givenName": "Hamdan",
+        "familyName": "Muneer",
+        "jobTitle": "Flutter Developer, Web Developer & Graphic Designer",
+        "description": "A Full stack designer and developer from Pakistan, focusing on interactive design, typography, responsive design & user-friendly interfaces. Building clean, modern web and mobile applications with strong emphasis on user experience, performance, and accessible design. Founder of Space Tech.",
+        "url": "https://hamdandev.site/",
+        "image": "https://hamdandev.site/assets/img/og-share.jpg",
+        "worksFor": { "@id": "https://hamdandev.site/#organization" },
+        "nationality": { "@type": "Country", "name": "Pakistan" },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Gujrat, Pakistan"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujrat",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://www.behance.net/hamdanmuneer",
+          "https://github.com/hamdan132",
+          "https://www.linkedin.com/in/hamdan-muneer/",
+          "https://www.instagram.com/hamdan_o_y/",
+          "https://www.fiverr.com/space_techstore",
+          "https://www.upwork.com/freelancers/~01e19e059fc3a8c870"
+        ],
+        "knowsAbout": [
+          "Flutter",
+          "Dart",
+          "Web Development",
+          "Mobile App Development",
+          "Graphic Design",
+          "UI/UX Design",
+          "Logo Design",
+          "Branding",
+          "Responsive Web Design",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "WordPress",
+          "Figma",
+          "Adobe Photoshop",
+          "Adobe Illustrator",
+          "TailwindCSS",
+          "Vue.js",
+          "Django",
+          "Flask",
+          "Firebase",
+          "Supabase",
+          "SQLite",
+          "MongoDB",
+          "PostgreSQL",
+          "Docker",
+          "TensorFlow",
+          "WebGL",
+          "Ionic",
+          "C#",
+          "C++",
+          "Java",
+          "Kotlin",
+          "jQuery",
+          "Bootstrap",
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Pug",
+          "SASS",
+          "REST APIs",
+          "Web3.js",
+          "OpenGL"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://hamdandev.site/#service",
+        "name": "Space Tech",
+        "url": "https://hamdandev.site/",
+        "image": "https://hamdandev.site/assets/img/logo.png",
+        "description": "Space Tech offers Flutter mobile app development, responsive web development, UI/UX design and graphic design services in Pakistan. Specializing in clean, modern, high-performance applications with strong emphasis on user experience, performance, and accessible design.",
+        "provider": { "@id": "https://hamdandev.site/#person" },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Pakistan"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujrat",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "serviceType": [
+          "Flutter App Development",
+          "Web Development",
+          "Graphic Design",
+          "UI/UX Design",
+          "Logo Design",
+          "Mobile App Development"
+        ],
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" as="image" href="assets/img/introduction-visual.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/img/logo.png" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <link rel="sitemap" type="application/xml" href="https://hamdandev.site/sitemap.xml" />
+</head>
+
+<!-- <body oncontextmenu="return false"> -->
+<body>
+
+  <!-- notification for small viewports and landscape oriented smartphones -->
+  <div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+              <img src="assets/img/logo.png" alt="Space Tech logo — Hamdan Ibne Muneer" />
+      <p>Space Tech</p>
+    </a>
+    <p class="device-notification--message">
+      Space Tech has so much to offer that we must request you orient your
+      device to portrait or find a larger screen. You won't be disappointed.
+    </p>
+  </div>
+
+  <div class="perspective effect-rotate-left">
+
+    <div class="container">
+      <div id="starfield" aria-hidden="true">
+        <div class="star-layer star-layer--far"></div>
+        <div class="star-layer star-layer--mid"></div>
+        <div class="star-layer star-layer--near"></div>
+      </div>
+      <div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="#0">
+              <img src="assets/img/logo.png" alt="Space Tech — Flutter & Web Developer Portfolio" class="header-img-logo" fetchpriority="high" />
+              <p>Space Tech</p>
+
+            </a>
+            <button class="header--cta cta">Hire me</button>
+
+            <div class="resume">
+              <a href="assets/resume/resume.pdf" download>
+                <h2>My Resume</h2>
+              </a>
+            </div>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+
+          </header>
+          <nav class="l-side-nav">
+            <ul class="side-nav">
+              <li class="is-active"><span>Home</span></li>
+              <li><span>Portfolio</span></li>
+              <li><span>About</span></li>
+              <li><span>Skills</span></li>
+              <li><span>Contact</span></li>
+              <li><span>Hire me</span></li>
+            </ul>
+          </nav>
+          <ul class="l-main-content main-content">
+
+
+            <!-- home -->
+
+            <li class="l-section section section--is-active">
+              <div class="intro">
+                <div class="intro--banner">
+                  <h1>I'm <span>Hamdan Ibne Muneer</span></h1>
+
+                  <div id="typed-strings">
+                    <span><em>Flutter</em><span class="typed-inside"> Developer</span></span>
+                    <span>Website<span class="typed-inside"> Developer</span></span>
+                    <span><em>App</em><span class="typed-inside"> Developer</span></span>
+                    <span>Graphic<span class="typed-inside"> Designer</span></span>
+                    <span>UI/UX<span class="typed-inside"> Specialist....</span></span>
+                  </div>
+                  <span id="typed" style="white-space: pre"></span>
+
+                  <button class="cta">
+                    Hire me
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                      style="enable-background: new 0 0 150 118" xml:space="preserve">
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path
+                          d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                      </g>
+                    </svg>
+                    <span class="btn-background"></span>
+                  </button>
+                  <img src="assets/img/introduction-visual.png" alt="Hamdan Ibne Muneer — Flutter developer, web developer and graphic designer at Space Tech, Pakistan" fetchpriority="high" />
+                </div>
+                <div class="intro--options">
+                  <!-- <h3>Hamdan Ibne Muneer</h3> -->
+                  
+                 <p>
+                    A Full stack designer and developer from Pakistan, who focuses on interactive design and a designer focusing on typography, responsive design &amp; user-friendly interfaces. I build clean, modern web and mobile applications with a strong emphasis on user experience, performance, and accessible design. Founder of Space Tech.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- Portfolio -->
+
+            <li class="l-section section">
+              <div class="work">
+                <h2>Passion</h2>
+                <div class="work--lockup">
+                  <ul class="slider">
+                    <li class="slider--item slider--item-left">
+                      <a href="graphic-portfolio.html">
+                        <div class="slider--item-image">
+                          <img data-src="assets/img/graphic.jpg" alt="Graphic design portfolio by Space Tech — Hamdan Ibne Muneer, Pakistan" width="400"  />
+                        </div>
+                        <p class="slider--item-title">Graphic</p>
+                        <p class="slider--item-description">
+                          Elevate your brand with Space Tech's cutting-edge graphic design solutions.
+                        </p>
+                      </a>
+                    </li>
+                    <li class="slider--item slider--item-center">
+                      <a href="Website-portfolio.html">
+                        <div class="slider--item-image">
+                          <img data-src="assets/img/website.jpg" alt="Web development portfolio — responsive websites by Space Tech Pakistan" width="400"  />
+                        </div>
+                        <p class="slider--item-title">Websites</p>
+                        <p class="slider--item-description">
+                          Transform your online presence into a digital masterpiece with Space Tech's website designing
+                          expertise.
+                        </p>
+                      </a>
+                    </li>
+                    <li class="slider--item slider--item-right">
+                      <a href="App-portfolio.html">
+                        <div class="slider--item-image">
+                          <img data-src="assets/img/app.jpg" alt="Flutter mobile app development portfolio by Hamdan Ibne Muneer" width="400"  />
+                        </div>
+                        <p class="slider--item-title">Apps</p>
+                        <p class="slider--item-description">
+                          Propel your business into the mobile era with Space Tech's top-notch app development services.
+                        </p>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="slider--prev">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                      style="enable-background: new 0 0 150 118" xml:space="preserve">
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="slider--next">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                      style="enable-background: new 0 0 150 118" xml:space="preserve">
+                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                        <path
+                          d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- About -->
+
+            <li class="l-section section">
+              <div class="about">
+                <div class="about--banner">
+                  <h2>I<br />believe in<br />quality<br />work</h2>
+                  <a>Career
+                    <span>
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                        style="enable-background: new 0 0 150 118" xml:space="preserve">
+                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                          <path
+                            d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                  <img data-src="assets/img/about-visual.png" alt="About Us" width="500"  />
+                </div>
+                <div class="about--options">
+                  <a id="open-model1" data-bg="assets/img/history.jpg">
+                    <h3>History</h3>
+                  </a>
+                  <a id="open-model2" data-bg="assets/img/experience.jpg">
+                    <h3>Experience</h3>
+                  </a>
+                  <a id="open-model3" data-bg="assets/img/goals.jpg">
+                    <h3>Goals</h3>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Skills -->
+
+            <li class="l-section section">
+              <div class="col-xs-12 col-md-6">
+                <div class="skill-wrap">
+                  <div class="skill-wrapper">
+
+                     <div class="skill clear"
+                      data-description="I have built and deployed Flutter apps at VisionBird Technologies and Syntax Digital, gaining expertise in cross-platform mobile app development."
+                      data-experience="VisionBird Technologies, Syntax Digital" data-start="2023" data-end="2025">
+                      <div class="skill-name">DART & FLUTTER</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I have used Git and GitHub across all my jobs for version control, collaboration, and project management, ensuring efficient team workflows."
+                      data-experience="All Jobs" data-start="2020" data-end="2025">
+                      <div class="skill-name">GIT & GITHUB</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+                    <div class="skill clear"
+                      data-description="I gained experience in Python at Syntax Digital through backend development and scripting projects, enhancing my skills in web development, data analysis, and automation."
+                      data-experience="Syntax Digital" data-start="2024" data-end="2025">
+                      <div class="skill-name">Python</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 70%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="70%">
+                        70%
+                      </div>
+                    </div>
+                    <div class="skill clear"
+                      data-description="I gained hands-on experience in HTML at 5D Tech Gujrat through front-end web development projects, building responsive and semantic websites."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">HTML</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 90%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="90%">
+                        90%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I used CSS extensively at 5D Tech Gujrat to create responsive layouts and enhance user interfaces, improving the visual appeal of websites."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">CSS</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I applied SASS, Flex, and Grid at 4NDS Network to streamline CSS development and maintain scalable stylesheets for better design efficiency."
+                      data-experience="4NDS Network" data-start="2022" data-end="2025">
+                      <div class="skill-name">SASS, Flex, Grid</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 70%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="70%">
+                        70%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I utilized Bootstrap at 4NDS Network to build mobile-first, responsive web applications quickly, ensuring seamless user experiences."
+                      data-experience="4NDS Network" data-start="2022" data-end="2025">
+                      <div class="skill-name">BOOTSTRAP</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 60%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="70%">
+                        70%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I developed dynamic web features using JavaScript at VisionBird Technologies, enhancing user engagement and interactivity."
+                      data-experience="VisionBird Technologies" data-start="2022" data-end="2025">
+                      <div class="skill-name">JavaScript</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 60%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="60%">
+                        60%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I managed and customized WordPress sites at 5D Tech Gujrat for clients, delivering tailored website solutions."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">WordPress</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                   
+
+                    <div class="skill clear"
+                      data-description="I created and edited graphics using Photoshop at 5D Tech Gujrat for branding and marketing, producing high-quality visual content."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">Photoshop</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 90%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="90%">
+                        90%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I designed logos and illustrations using Illustrator at 5D Tech Gujrat, bringing creative ideas to life."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">Illustrator</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I prototyped user interfaces using Adobe XD at 4NDS Network, improving design workflows and user experience."
+                      data-experience="4NDS Network" data-start="2022" data-end="2025">
+                      <div class="skill-name">Adobe Xd</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I used CorelDraw for vector graphics and designs at 5D Tech Gujrat, creating versatile and scalable artwork."
+                      data-experience="5D Tech Gujrat" data-start="2020" data-end="2025">
+                      <div class="skill-name">CorelDraw</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 80%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="80%">
+                        80%
+                      </div>
+                    </div>
+
+                    <div class="skill clear"
+                      data-description="I designed and collaborated on UI/UX projects using Figma at VisionBird Technologies, fostering teamwork and innovation."
+                      data-experience="VisionBird Technologies" data-start="2023" data-end="2025">
+                      <div class="skill-name">FIGMA</div>
+                      <div class="skill-bar">
+                        <div class="bar" style="width: 70%"></div>
+                      </div>
+                      <div class="skill-level" data-skill-value="70%">
+                        70%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- Skill Tooltip -->
+              <div id="skill-tooltip" class="skill-tooltip">
+                <div class="tooltip-content">
+                  <h4 id="tooltip-skill-name"></h4>
+                  <p id="tooltip-description"></p>
+                  <p><strong>Years of Experience:</strong> <span id="tooltip-experience"></span></p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <!-- Contact -->
+
+            <li class="l-section section">
+              <div class="contact" data-bg="assets/img/contact-visual.png">
+                <div class="contact--lockup">
+                  <div class="modal">
+                    <div class="modal--information">
+                      <p>Gharib Pura, Gujrat Pakistan</p>
+                      <a href="mailto:hamdanmuneer15@gmail.com">Hamdanmuneer15@gmail.com</a>
+                      <a href="tel:+923094600827">+92 309 460 08 27</a>
+                    </div>
+                    <ul class="modal--options">
+                      <li><a href="https://www.behance.net/hamdanmuneer">Bēhance</a></li>
+                      <li><a href="https://github.com/hamdan132">Github</a></li>
+                      <li>
+                        <a href="mailto:hamdanmuneer15@gmail.com">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Hire me -->
+
+            <li class="l-section section">
+              <div class="hire">
+                <h2>You want us to do</h2>
+                <!-- checkout formspree.io for easy form setup -->
+                <form class="work-request" onsubmit="event.preventDefault(); sendMail();">
+                  <div class="work-request--options">
+                    <span class="options-a">
+                      <input id="opt-1" type="checkbox" value="app design" />
+                      <label for="opt-1">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        App Development
+                      </label>
+                      <input id="opt-2" type="checkbox" value="graphic design" />
+                      <label for="opt-2">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        Web Development
+                      </label>
+                      <input id="opt-3" type="checkbox" value="motion design" />
+                      <label for="opt-3">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        Graphic Design
+                      </label>
+                    </span>
+                    <span class="options-b">
+                      <input id="opt-4" type="checkbox" value="ux design" />
+                      <label for="opt-4">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        UI/UX Design
+                      </label>
+                      <input id="opt-5" type="checkbox" value="webdesign" />
+                      <label for="opt-5">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        Brand Planning
+                      </label>
+                      <input id="opt-6" type="checkbox" value="marketing" />
+                      <label for="opt-6">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                          style="enable-background: new 0 0 150 111" xml:space="preserve">
+                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                            <path
+                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                        Logo Design
+                      </label>
+                    </span>
+                  </div>
+                  <div class="work-request--information">
+                    <div class="information-name">
+                      <input id="name" type="text" spellcheck="false" />
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="information-email">
+                      <input id="email" type="email" spellcheck="false" />
+                      <label for="email">Email</label>
+                    </div>
+
+                  </div>
+                  <div class="work-request--information">
+                    <div class="information-message">
+                      <input id="message" type="message" spellcheck="false" />
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <button class="Submit">Send Request</button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <!-- alert message -->
+      <div class="bg-alert-message" style="display: none;">
+        <div class="alert alert-custom" role="alert" style="display: none;">
+          <span id="alert-message"></span>
+          <span class="alert-close">&times;</span>
+        </div>
+      </div>
+
+
+
+
+      <div class="preview-wrapper">
+        <div>
+          <a href="https://www.fiverr.com/space_techstore?public_mode=true" class="fixed-fiverr" target="_blank"><img
+              data-src="assets/img/Fiverr.png" alt="fiverr profile" style="height: 35%" loading="lazy" />
+            <span>Fiverr</span></a>
+        </div>
+        <div>
+          <a href="https://wa.me/923094600827" class="fixed-whatsapp" target="_blank"><i class="fa fa-whatsapp"></i>
+            <span>WhatsApp</span></a>
+        </div>
+        <div>
+          <a href="https://www.upwork.com/freelancers/~01e19e059fc3a8c870?mp_source=share" class="fixed-upwork"
+            target="_blank"><img data-src="assets/img/upwork.png" alt="upwork profile" style="height: 30%" loading="lazy" />
+            <span>Upwork</span></a>
+        </div>
+        <div>
+          <a href="https://www.behance.net/hamdanmuneer" class="fixed-facebook" target="_blank"><i
+              class="fa fa-behance"></i> <span>Behance</span></a>
+        </div>
+
+        <div>
+          <a href="https://github.com/hamdan132" class="fixed-gplus" target="_blank">
+            <i class="fa fa-github"></i> <span>GitHub</span></a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/hamdan-muneer/" class="fixed-linkedin" target="_blank"><i
+              class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/hamdan_o_y/" class="fixed-instagrem" target="_blank"><i
+              class="fa fa-instagram"></i> <span>Instagram</span></a>
+        </div>
+
+      </div>
+    </div>
+    <ul class="outer-nav">
+      <li class="is-active">Home</li>
+      <li>Portfolio</li>
+      <li>About</li>
+      <li>Skills</li>
+      <li>Contact</li>
+      <li>Hire me</li>
+    </ul>
+
+    <div class="preloader">
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+      <div class="loading-mask"></div>
+    </div>
+
+
+
+    <!-- history popup -->
+
+
+
+    <div class="model__container" id="model-container">
+      <div class="model__content">
+        <div class="model__close close-model" title="Close">
+          <i class='bx bx-x'></i>
+        </div>
+
+        <div class="history-block">
+          <div class="section-title light clear">
+            <h3>Acadamy History</h3>
+          </div>
+          <!-- /.section-title -->
+          <div class="history-scroller">
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Bahawal Public high School</h5>
+                <span>2015 - 2017</span>
+                <p>Matric in Science</p>
+
+              </div>
+            </div>
+            <!-- /.history-item -->
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Sewdish College of Technology and Engineering</h5>
+                <span>2017 - 2020</span>
+                <p>Intermediate D.A.E <br>F.SC Equalient</p>
+              </div>
+            </div>
+            <!-- /.history-item -->
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Virtual University Of Pakistan</h5>
+                <span>2020 - 2025 </span>
+                <p>Graduation BSIT</p>
+              </div>
+            </div>
+
+            <!-- /.history-item -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- history popup end-->
+
+
+
+
+
+    <!-- experience popup -->
+
+
+
+
+    <div class="model__container" id="model-container-2">
+      <div class="model__content">
+        <div class="model__close close-model-2" title="Close">
+          <i class='bx bx-x'></i>
+        </div>
+
+        <div class="history-block">
+          <div class="section-title light clear">
+            <h3>Work Experience</h3>
+          </div>
+
+          <div class="history-scroller">
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>5D Tech Gujrat</h5>
+                <span>2020 - 2022</span>
+                <p>I started my career at 5D Tech as a graphic and front-end web designer. During my time there, I
+                  learned a lot about design and gained hands-on experience. It really helped me improve my skills and
+                  grow as a designer.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>4NDS Network</h5>
+                <span>2022 - 2023</span>
+                <p>At 4nd Network, I worked as a UI/UX and Front-End specialist, gaining valuable insights into the
+                  impact of design. I also had the opportunity to connect and learn from professionals in the field.</p>
+              </div>
+            </div>
+
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>VisionBird Technologies</h5>
+                <span>2023 - 2024 </span>
+                <p>At Visionbird Technology, I worked as a Web and Graphic Designer, creating engaging user interfaces
+                  and visuals. I also explored Flutter app development during my time there from June 2023 to September
+                  2024.</p>
+              </div>
+            </div>
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Syntax Digital</h5>
+                <span>2024 - Continued </span>
+                <p>At Syntax Digital, I worked as an App Lead Engineer where I designed apps, wrote clean code, and
+                  contributed to UI/UX projects. I supported Flutter development and also managed and collaborated with
+                  the web team.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <!-- experience popup end-->
+
+
+
+
+
+    <!-- goals popup -->
+
+
+
+    <div class="model__container" id="model-container-3">
+      <div class="model__content">
+        <div class="model__close close-model-3" title="Close">
+          <i class='bx bx-x'></i>
+        </div>
+
+        <div class="history-block">
+          <div class="section-title light clear">
+            <h3>Future Goals</h3>
+          </div>
+
+          <div class="history-scroller">
+
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Learning</h5>
+                <span>2024 - 2026</span>
+                <p>The main objective as a developer is to be productive and deliver value to the company and people.
+                  Want to work on a complex system has a certain level of complexity or scale.
+                  Getting a job as App Lead Engineer.</p>
+              </div>
+            </div>
+
+            <div class="history-item">
+
+              <div class="history-text">
+                <h5>Launching</h5>
+                <span>2026 - 2028</span>
+                <p>As far as future goes we will see what future holds for me..... </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <!-- goals popup end-->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/functions-min.js" defer></script>
+    <script src="assets/js/lazy-load.js" defer></script>
+    <script>
+      const currentUrl = window.location.href;
+      const baseUrl = "https://hamdandev.site/";
+
+      if (currentUrl.endsWith("/index.html") || currentUrl.endsWith("/index.html#")) {
+        window.location.replace(baseUrl);
+      }
+    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/typed/typed.umd.js" defer></script>
+    <script src="assets/js/disableInspection.js" defer></script>
+    <script src="assets/js/stars.js" defer></script>
+</body>
+
+</html>
