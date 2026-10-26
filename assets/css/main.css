@@ -663,7 +663,7 @@ body {
   left: 10px;
   color: var(--text-primary);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 900;
   opacity: 0;
   visibility: hidden
 }
@@ -1208,6 +1208,22 @@ body {
   .about {
     max-width: 100%
   }
+
+  .skill .skill-bar {
+    height: 9px !important;
+  }
+
+  .skill .skill-name {
+    font-size: 10px !important;
+  }
+
+  .skill .bar {
+    height: 9px !important;
+  }
+
+  .skill {
+    min-height: 20px;
+  }
 }
 
 .about--banner {
@@ -1313,6 +1329,7 @@ body {
 }
 
 .about--options>a {
+  filter: blur(1px);
   position: relative;
   width: 150px;
   height: 75px;
@@ -1977,33 +1994,33 @@ body {
   }
 
   .skill {
-    min-height: 28px !important;
+    min-height: 20px !important;
+    margin-bottom: 1px !important;
   }
 
   .skill .skill-name {
     width: 38%;
     font-size: 9px;
-    padding: 0px 10px 0 2px;
-    /* border-right: 0 !important; */
-    margin: 0 6px !important;
+    padding: 0px 6px 0 2px;
+    margin: 0 4px !important;
     min-width: auto !important;
     text-align: left !important;
   }
 
   .skill .bar {
-
-    height: 5px !important;
+    height: 8px !important;
   }
 
   .skill .skill-bar {
+    height: 8px !important;
     margin: 2px !important;
   }
 
   .skill .skill-level {
-    margin: 0px 10px !important;
+    margin: 0px 6px !important;
     min-width: auto !important;
     text-align: left !important;
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .tooltip-content h4 {
@@ -2291,6 +2308,7 @@ body {
   display: flex;
   height: 100vh;
   align-items: center;
+  padding: 10px 0;
 }
 
 .skill-wrapper {
@@ -2301,7 +2319,7 @@ body {
   display: flex;
   width: 900px;
   max-width: 95%;
-  height: 100%;
+  height: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2318,7 +2336,7 @@ body {
   background-color: #1e2530;
   border-radius: 2px;
   height: auto;
-  min-height: 35px;
+  min-height: 22px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
@@ -2329,7 +2347,7 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 .skill:hover {
@@ -2341,38 +2359,40 @@ body {
 .skill>div {
   color: var(--text-primary);
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
 }
 
 .skill .skill-name {
   border-right: 2px solid #2e333a;
-  min-width: 160px;
+  min-width: 130px;
   text-align: center;
   text-transform: uppercase;
+  padding: 0px 6px;
 }
 
 .skill .skill-bar {
   background-color: #07080b;
-  border-radius: 15px;
-  margin: 0 15px;
+  border-radius: 12px;
+  margin: 0 10px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  height: 14px;
 }
 
 .skill .bar {
   background-color: var(--primary);
   border-radius: 10px;
-  height: 8px;
+  height: 12px;
   width: 0;
 }
 
 .skill .skill-level {
   border-left: 2px solid #2e333a;
-  min-width: 70px;
+  min-width: 50px;
   text-align: center;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -2383,6 +2403,7 @@ body {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   /* transition: all 0.3s ease 0s; */
+  font-size: 11px;
 }
 
 .clear:after {
@@ -2465,6 +2486,7 @@ body {
   top: 0;
   left: 0;
   background-color: var(--secondary-bg);
+  backdrop-filter: blur(3px);
   width: 100%;
   height: 100%;
   display: grid;
@@ -2574,7 +2596,7 @@ body {
   }
 
   .skill {
-    min-height: 30px;
+    min-height: 22px;
     margin: 1px 0;
   }
 }
