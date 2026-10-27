@@ -2395,7 +2395,7 @@ body {
   -webkit-align-items: flex-end;
   -moz-align-items: flex-end;
   align-items: flex-end;
-  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   /* transition: all 0.3s ease 0s; */
